@@ -1,0 +1,832 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DomainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="2.0.0.0" name="EntitiesModel" namespace="ORM_STM" showPropertiesCompartment="true" xmlns="http://www.telerik.com/ORM">
+  <orm:orm name="EntitiesModel" backend="postgresql" xmlns:orm="http://tempuri.org/ORM">
+    <orm:namespace name="ORM_STM" default="true">
+      <orm:class name="Tarjeta_personalizada" uniqueId="9f1127d9-2283-483d-b2fc-a1822213e862">
+        <orm:table name="tarjeta_personalizada" />
+        <orm:identity>
+          <orm:single-field field-name="_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_id" property="Id" behavior="readwrite" uniqueId="1b9697e2-3062-4974-853b-ad90ff2dfe0f" type="System.Int32">
+          <orm:column name="id" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_saldo" property="Saldo" behavior="readwrite" uniqueId="676109a2-cbc5-434e-ab19-1ee47a48cb53" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="saldo" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_estado" property="Estado" behavior="readwrite" uniqueId="c3078b73-2b16-4a48-b5cc-5a18a7407db8" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="estado" sql-type="bool" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="_id_Estacion" property="Id_estacion" behavior="readwrite" uniqueId="40804ca4-9057-4b6d-b4a7-34a238d76897" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="id_estacion" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_id_Cliente" property="Id_cliente" behavior="readwrite" uniqueId="e89f8c76-ae09-4505-9d43-c22c032a8227" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="id_cliente" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_nombre" property="Nombre" behavior="readwrite" uniqueId="eb532085-b263-4359-96a9-bf1e0b000f6f" type="System.String">
+          <orm:column name="nombre" sql-type="varchar" nullable="true" length="20" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_telefono" property="Telefono" behavior="readwrite" uniqueId="af45467a-8948-4221-adc5-42bbdc5d446e" type="System.String">
+          <orm:column name="telefono" sql-type="varchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+      </orm:class>
+      <orm:class name="Tarjetum" uniqueId="d285a415-ce86-4df2-b074-52e63cb2f440">
+        <orm:table name="tarjeta" />
+        <orm:identity>
+          <orm:single-field field-name="_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_id" property="Id" behavior="readwrite" uniqueId="981069e6-d27f-4bf9-99b8-199a17096770" type="System.Int32">
+          <orm:column name="id" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_saldo" property="Saldo" behavior="readwrite" uniqueId="ef88c204-ebd6-44ae-bbfe-1d49adcfb0db" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="saldo" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_estado" property="Estado" behavior="readwrite" uniqueId="0e97e357-316a-4131-9e5f-b151a42fe4f1" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="estado" sql-type="bool" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="_id_Estacion" property="Id_estacion" behavior="readwrite" uniqueId="a01275b9-c6ff-4cc6-86ba-fe721c4188cd" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="id_estacion" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_estacion" property="Estacion" behavior="readwrite" uniqueId="bcd76ab4-bf3c-492d-a2e5-ddc132bf9ce9" type="ORM_STM.Estacion">
+          <orm:reference uniqueId="1efe7512-8600-46a7-98ce-12d0a4257ee1">
+            <orm:sharedfield name="_id_Estacion" target-class="ORM_STM.Estacion" target-field="_id" />
+            <orm:constraint name="tarjeta_id_estacion_fkey" destination-table="estacion" />
+          </orm:reference>
+        </orm:field>
+        <orm:field name="_solicitud_Reclamos" property="Solicitud_reclamos" behavior="readwrite" uniqueId="4d66a6a1-983e-4dae-ad3f-7ac271f828d1" type="ORM_STM.Solicitud_reclamo">
+          <orm:collection element-class="ORM_STM.Solicitud_reclamo" inverse-field="_tarjetum" managed="true" order-by="" uniqueId="f4f10a8c-a293-483c-ad49-29bf50385344" />
+        </orm:field>
+        <orm:field name="_recargas" property="Recargas" behavior="readwrite" uniqueId="c5b1cad9-9e9c-46a8-9f73-f291a6c87ab0" type="ORM_STM.Recarga">
+          <orm:collection element-class="ORM_STM.Recarga" inverse-field="_tarjetum" managed="true" order-by="" uniqueId="b6e76637-d682-4aed-8dbf-c059698d6e94" />
+        </orm:field>
+        <orm:field name="_consumos" property="Consumos" behavior="readwrite" uniqueId="d2362bb7-3509-40c8-81c3-32262c0db4c9" type="ORM_STM.Consumo">
+          <orm:collection element-class="ORM_STM.Consumo" inverse-field="_tarjetum" managed="true" order-by="" uniqueId="9d2006f1-0362-4b8c-ac83-6ceda8f05db3" />
+        </orm:field>
+      </orm:class>
+      <orm:class name="Solicitud_reclamo" uniqueId="7a768134-3dc5-4b9f-9961-796b06638d33">
+        <orm:table name="solicitud_reclamo" />
+        <orm:identity>
+          <orm:multiple-field>
+            <orm:single-field field-name="_id_Tarjeta" />
+            <orm:single-field field-name="_id_Estacion" />
+          </orm:multiple-field>
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_id_Tarjeta" property="Id_tarjeta" behavior="readwrite" uniqueId="8e4ca5e4-2e83-4824-aed2-cfb5c51d52b9" type="System.Int32">
+          <orm:column name="id_tarjeta" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_id_Estacion" property="Id_estacion" behavior="readwrite" uniqueId="2c6112ef-c41e-443c-bddf-252a7c47dffe" type="System.Int32">
+          <orm:column name="id_estacion" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_tipo" property="Tipo" behavior="readwrite" uniqueId="ba4c95e0-241f-41fa-8a8b-4eabcadabf71" type="System.String">
+          <orm:column name="tipo" sql-type="varchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_descripcion" property="Descripcion" behavior="readwrite" uniqueId="02e23287-e47d-4062-a3d4-13772235214a" type="System.String">
+          <orm:column name="descripcion" sql-type="varchar" nullable="true" length="100" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_estacion" property="Estacion" behavior="readwrite" uniqueId="970d406f-8fe0-421f-95e2-8ce3894a983e" type="ORM_STM.Estacion">
+          <orm:reference uniqueId="7dc66575-6f6c-4cb6-81c5-89a3ee7ecaf5">
+            <orm:sharedfield name="_id_Estacion" target-class="ORM_STM.Estacion" target-field="_id" />
+            <orm:constraint name="solicitud_reclamo_id_estacion_fkey" destination-table="estacion" />
+          </orm:reference>
+        </orm:field>
+        <orm:field name="_tarjetum" property="Tarjetum" behavior="readwrite" uniqueId="96d829fd-a23a-45bc-a90d-e9b8eb7202ba" type="ORM_STM.Tarjetum">
+          <orm:reference uniqueId="f4f10a8c-a293-483c-ad49-29bf50385344">
+            <orm:sharedfield name="_id_Tarjeta" target-class="ORM_STM.Tarjetum" target-field="_id" />
+            <orm:constraint name="solicitud_reclamo_id_tarjeta_fkey" destination-table="tarjeta" />
+          </orm:reference>
+        </orm:field>
+      </orm:class>
+      <orm:class name="Rutum" uniqueId="4a6c5fb3-e91c-48a7-a7d0-2dbad973183b">
+        <orm:table name="ruta" />
+        <orm:identity>
+          <orm:single-field field-name="_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_id" property="Id" behavior="readwrite" uniqueId="4d8f7913-4af9-4ccf-b5e5-f3a26374895a" type="System.Int32">
+          <orm:column name="id" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_descripcion" property="Descripcion" behavior="readwrite" uniqueId="5e7ca66b-5857-4eb4-8536-b8f94310d8ce" type="System.String">
+          <orm:column name="descripcion" sql-type="varchar" nullable="true" length="100" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_fecha_Creacion" property="Fecha_creacion" behavior="readwrite" uniqueId="a14c8a0e-5190-41d9-a8e2-009e3d018a1c" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="fecha_creacion" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        </orm:field>
+        <orm:field name="_estado" property="Estado" behavior="readwrite" uniqueId="0f8abf15-9fa6-471b-9ba1-8e91f75ab050" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="estado" sql-type="bool" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="_programacions" property="Programacions" behavior="readwrite" uniqueId="8f3e7825-2a18-4d6e-91ee-b615c956d20b" type="ORM_STM.Programacion">
+          <orm:collection element-class="ORM_STM.Programacion" inverse-field="_rutum" managed="true" order-by="" uniqueId="3a609b33-8eb8-45ea-b668-e9e585750f69" />
+        </orm:field>
+      </orm:class>
+      <orm:class name="Recarga" uniqueId="1145c38b-3ff7-4fd9-8461-ea2548fa3fd5">
+        <orm:table name="recargas" />
+        <orm:identity>
+          <orm:multiple-field>
+            <orm:single-field field-name="_id_Estacion" />
+            <orm:single-field field-name="_id_Tarjeta" />
+          </orm:multiple-field>
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_id_Estacion" property="Id_estacion" behavior="readwrite" uniqueId="8b038ddc-1fbf-4a07-a1ac-352d85ee43c1" type="System.Int32">
+          <orm:column name="id_estacion" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_id_Tarjeta" property="Id_tarjeta" behavior="readwrite" uniqueId="1711b642-bb4f-48d6-99cc-d7d35e58bd93" type="System.Int32">
+          <orm:column name="id_tarjeta" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_fecha" property="Fecha" behavior="readwrite" uniqueId="803733d0-7162-4303-a142-72143fa235eb" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="fecha" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        </orm:field>
+        <orm:field name="_hora" property="Hora" behavior="readwrite" uniqueId="1d50d14d-5efc-43a4-bf88-a8071119893f" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="hora" sql-type="time" nullable="true" length="0" scale="0" ado-type="Time" />
+        </orm:field>
+        <orm:field name="_estacion" property="Estacion" behavior="readwrite" uniqueId="8cb5bef4-1f74-44b3-8dcb-e303b305803f" type="ORM_STM.Estacion">
+          <orm:reference uniqueId="cc43d2b1-cd03-4eed-804c-179be82edcc2">
+            <orm:sharedfield name="_id_Estacion" target-class="ORM_STM.Estacion" target-field="_id" />
+            <orm:constraint name="recargas_id_estacion_fkey" destination-table="estacion" />
+          </orm:reference>
+        </orm:field>
+        <orm:field name="_tarjetum" property="Tarjetum" behavior="readwrite" uniqueId="ec9042cd-3353-4c68-95e5-2e69fb54fea2" type="ORM_STM.Tarjetum">
+          <orm:reference uniqueId="b6e76637-d682-4aed-8dbf-c059698d6e94">
+            <orm:sharedfield name="_id_Tarjeta" target-class="ORM_STM.Tarjetum" target-field="_id" />
+            <orm:constraint name="recargas_id_tarjeta_fkey" destination-table="tarjeta" />
+          </orm:reference>
+        </orm:field>
+      </orm:class>
+      <orm:class name="Programacion" uniqueId="4e024609-c206-4dec-a190-39594e314081">
+        <orm:table name="programacion" />
+        <orm:identity>
+          <orm:multiple-field>
+            <orm:single-field field-name="_id_Bus" />
+            <orm:single-field field-name="_id_Ruta" />
+            <orm:single-field field-name="_id_Empleado" />
+          </orm:multiple-field>
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_id_Bus" property="Id_bus" behavior="readwrite" uniqueId="320b2d8b-a5b2-4df4-90cd-fb078d2ad601" type="System.Int32">
+          <orm:column name="id_bus" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_id_Ruta" property="Id_ruta" behavior="readwrite" uniqueId="fa6c23ae-b302-4aca-b019-f212d6b79716" type="System.Int32">
+          <orm:column name="id_ruta" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_id_Empleado" property="Id_empleado" behavior="readwrite" uniqueId="1a77fe51-e637-47ee-be19-d6341c66a8f8" type="System.Int32">
+          <orm:column name="id_empleado" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_fecha" property="Fecha" behavior="readwrite" uniqueId="aaddb6cb-e1fb-42b7-bc51-17a87467f9dc" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="fecha" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        </orm:field>
+        <orm:field name="_horario" property="Horario" behavior="readwrite" uniqueId="e3105558-9fc4-4781-a29e-ec12e992e297" type="System.String">
+          <orm:column name="horario" sql-type="varchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_bu" property="Bu" behavior="readwrite" uniqueId="7da0c496-caa3-4519-8f2e-e2de4fad4894" type="ORM_STM.Bu">
+          <orm:reference uniqueId="866d3535-3323-4094-8dd8-1a9216859fd6">
+            <orm:sharedfield name="_id_Bus" target-class="ORM_STM.Bu" target-field="_id" />
+            <orm:constraint name="programacion_id_bus_fkey" destination-table="bus" />
+          </orm:reference>
+        </orm:field>
+        <orm:field name="_empleado" property="Empleado" behavior="readwrite" uniqueId="28aea345-de1f-4e34-bd06-a5b4aec9ce33" type="ORM_STM.Empleado">
+          <orm:reference uniqueId="623066a9-2a91-402a-a775-4a4974773987">
+            <orm:sharedfield name="_id_Empleado" target-class="ORM_STM.Empleado" target-field="_id" />
+            <orm:constraint name="programacion_id_empleado_fkey" destination-table="empleado" />
+          </orm:reference>
+        </orm:field>
+        <orm:field name="_rutum" property="Rutum" behavior="readwrite" uniqueId="6955e631-2e14-4d2b-9062-e3a3fe00dbea" type="ORM_STM.Rutum">
+          <orm:reference uniqueId="3a609b33-8eb8-45ea-b668-e9e585750f69">
+            <orm:sharedfield name="_id_Ruta" target-class="ORM_STM.Rutum" target-field="_id" />
+            <orm:constraint name="programacion_id_ruta_fkey" destination-table="ruta" />
+          </orm:reference>
+        </orm:field>
+      </orm:class>
+      <orm:class name="Estacion" uniqueId="687348bc-12a9-4cb4-b020-62778661cee2">
+        <orm:table name="estacion" />
+        <orm:identity>
+          <orm:single-field field-name="_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_id" property="Id" behavior="readwrite" uniqueId="18c0cf6f-b794-4f18-95a7-3c399ff137b9" type="System.Int32">
+          <orm:column name="id" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_nombre" property="Nombre" behavior="readwrite" uniqueId="9b805c22-00b0-4da0-a87d-1b0671da6e65" type="System.String">
+          <orm:column name="nombre" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_direccion" property="Direccion" behavior="readwrite" uniqueId="840b870d-0f5b-404f-949a-66c7dca1bb48" type="System.String">
+          <orm:column name="direccion" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_estado" property="Estado" behavior="readwrite" uniqueId="35df665b-9941-4005-a538-f4ff07ecd479" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="estado" sql-type="bool" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="_tarjeta" property="Tarjeta" behavior="readwrite" uniqueId="cc40454f-215c-4c08-b895-fe7ccee7681a" type="ORM_STM.Tarjetum">
+          <orm:collection element-class="ORM_STM.Tarjetum" inverse-field="_estacion" managed="true" order-by="" uniqueId="1efe7512-8600-46a7-98ce-12d0a4257ee1" />
+        </orm:field>
+        <orm:field name="_solicitud_Reclamos" property="Solicitud_reclamos" behavior="readwrite" uniqueId="b49c438b-ff37-4327-993f-de9d8ff7a62c" type="ORM_STM.Solicitud_reclamo">
+          <orm:collection element-class="ORM_STM.Solicitud_reclamo" inverse-field="_estacion" managed="true" order-by="" uniqueId="7dc66575-6f6c-4cb6-81c5-89a3ee7ecaf5" />
+        </orm:field>
+        <orm:field name="_recargas" property="Recargas" behavior="readwrite" uniqueId="1bc11e81-62ec-4370-87d8-b75bb3fddd77" type="ORM_STM.Recarga">
+          <orm:collection element-class="ORM_STM.Recarga" inverse-field="_estacion" managed="true" order-by="" uniqueId="cc43d2b1-cd03-4eed-804c-179be82edcc2" />
+        </orm:field>
+        <orm:field name="_empleados" property="Empleados" behavior="readwrite" uniqueId="8e77ab79-cae6-4f82-914d-442a8fd4d1b0" type="ORM_STM.Empleado">
+          <orm:collection element-class="ORM_STM.Empleado" inverse-field="_estacion" managed="true" order-by="" uniqueId="70469da6-8138-4b02-b966-bdd8365b67cd" />
+        </orm:field>
+        <orm:field name="_consumos" property="Consumos" behavior="readwrite" uniqueId="82db5478-adaf-41c1-a1fe-fe9f46e2f049" type="ORM_STM.Consumo">
+          <orm:collection element-class="ORM_STM.Consumo" inverse-field="_estacion" managed="true" order-by="" uniqueId="8790aab6-f203-43d2-92e7-74563a8a5319" />
+        </orm:field>
+      </orm:class>
+      <orm:class name="Empleado" uniqueId="9953dbb0-7b9c-48dd-98ea-3e265262c43b">
+        <orm:table name="empleado" />
+        <orm:identity>
+          <orm:single-field field-name="_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_id" property="Id" behavior="readwrite" uniqueId="a4e7d291-73c0-45ee-873f-8805295950df" type="System.Int32">
+          <orm:column name="id" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_nombre" property="Nombre" behavior="readwrite" uniqueId="c8f6b8d1-6dad-4957-b451-9a80f9abc19e" type="System.String">
+          <orm:column name="nombre" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_tipo_Id" property="Tipo_id" behavior="readwrite" uniqueId="0b4411af-5cd9-4b83-8397-9b5107134ec4" type="System.String">
+          <orm:column name="tipo_id" sql-type="varchar" nullable="true" length="20" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_cargo" property="Cargo" behavior="readwrite" uniqueId="05fef137-10b0-45b5-ae5c-0e9d2280823c" type="System.String">
+          <orm:column name="cargo" sql-type="varchar" nullable="true" length="20" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_email" property="Email" behavior="readwrite" uniqueId="944fde23-b376-4a41-a3ef-04e7732f3464" type="System.String">
+          <orm:column name="email" sql-type="varchar" nullable="true" length="20" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_direccion" property="Direccion" behavior="readwrite" uniqueId="ed9d46df-588e-400e-a5ee-69d54095c6f8" type="System.String">
+          <orm:column name="direccion" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_telefono" property="Telefono" behavior="readwrite" uniqueId="312a8fe4-69ab-4520-bd58-b4831d6b5223" type="System.String">
+          <orm:column name="telefono" sql-type="varchar" nullable="true" length="20" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_salario" property="Salario" behavior="readwrite" uniqueId="30a246ab-d54c-4910-9812-091860066a19" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="salario" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_estado" property="Estado" behavior="readwrite" uniqueId="200f593b-67b8-4c5d-9f40-af48e13c8683" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="estado" sql-type="bool" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="_id_Estacion" property="Id_estacion" behavior="readwrite" uniqueId="77aae982-7e7d-4ff8-bf13-df588a7295ee" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="id_estacion" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_programacions" property="Programacions" behavior="readwrite" uniqueId="9f646223-ef59-4d36-bcce-0d0d76dd833b" type="ORM_STM.Programacion">
+          <orm:collection element-class="ORM_STM.Programacion" inverse-field="_empleado" managed="true" order-by="" uniqueId="623066a9-2a91-402a-a775-4a4974773987" />
+        </orm:field>
+        <orm:field name="_estacion" property="Estacion" behavior="readwrite" uniqueId="d7226108-16ab-48c1-adae-2790891ceddf" type="ORM_STM.Estacion">
+          <orm:reference uniqueId="70469da6-8138-4b02-b966-bdd8365b67cd">
+            <orm:sharedfield name="_id_Estacion" target-class="ORM_STM.Estacion" target-field="_id" />
+            <orm:constraint name="empleado_id_estacion_fkey" destination-table="estacion" />
+          </orm:reference>
+        </orm:field>
+      </orm:class>
+      <orm:class name="Consumo" uniqueId="baf188e7-664d-4d8b-ac2f-f85160218f14">
+        <orm:table name="consumo" />
+        <orm:identity>
+          <orm:multiple-field>
+            <orm:single-field field-name="_id_Estacion" />
+            <orm:single-field field-name="_id_Tarjeta" />
+          </orm:multiple-field>
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_id_Estacion" property="Id_estacion" behavior="readwrite" uniqueId="46509c02-abe1-4371-81f6-624384f99fef" type="System.Int32">
+          <orm:column name="id_estacion" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_id_Tarjeta" property="Id_tarjeta" behavior="readwrite" uniqueId="92fc25dc-728a-405d-a979-c6b48aae8951" type="System.Int32">
+          <orm:column name="id_tarjeta" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_fecha" property="Fecha" behavior="readwrite" uniqueId="210b1de1-77cb-4775-8144-c69bc731ed81" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="fecha" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        </orm:field>
+        <orm:field name="_hora" property="Hora" behavior="readwrite" uniqueId="7e444a08-311e-4323-b48c-db07f5d331f5" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="hora" sql-type="time" nullable="true" length="0" scale="0" ado-type="Time" />
+        </orm:field>
+        <orm:field name="_estacion" property="Estacion" behavior="readwrite" uniqueId="96dc50ee-acd4-43e9-92e8-476bd66ada70" type="ORM_STM.Estacion">
+          <orm:reference uniqueId="8790aab6-f203-43d2-92e7-74563a8a5319">
+            <orm:sharedfield name="_id_Estacion" target-class="ORM_STM.Estacion" target-field="_id" />
+            <orm:constraint name="consumo_id_estacion_fkey" destination-table="estacion" />
+          </orm:reference>
+        </orm:field>
+        <orm:field name="_tarjetum" property="Tarjetum" behavior="readwrite" uniqueId="a18a0562-aa56-491f-b4ad-516d83fa0cf9" type="ORM_STM.Tarjetum">
+          <orm:reference uniqueId="9d2006f1-0362-4b8c-ac83-6ceda8f05db3">
+            <orm:sharedfield name="_id_Tarjeta" target-class="ORM_STM.Tarjetum" target-field="_id" />
+            <orm:constraint name="consumo_id_tarjeta_fkey" destination-table="tarjeta" />
+          </orm:reference>
+        </orm:field>
+      </orm:class>
+      <orm:class name="Bu" uniqueId="d102a0a8-3070-43ac-8f8c-30c97e92104a">
+        <orm:table name="bus" />
+        <orm:identity>
+          <orm:single-field field-name="_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_id" property="Id" behavior="readwrite" uniqueId="9a15fe0e-436f-49b4-9f67-ff21683415f8" type="System.Int32">
+          <orm:column name="id" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_fecha_Adq" property="Fecha_adq" behavior="readwrite" uniqueId="e8d9aa20-08c0-4633-b9f1-1b3cfbfd2c30" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="fecha_adq" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        </orm:field>
+        <orm:field name="_modelo" property="Modelo" behavior="readwrite" uniqueId="a88d4370-5663-432a-a1fe-2c1732c3e9b2" type="System.String">
+          <orm:column name="modelo" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_placa" property="Placa" behavior="readwrite" uniqueId="d745a96d-64d2-4ee5-9ab2-9c11e0acfa37" type="System.String">
+          <orm:column name="placa" sql-type="varchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_tipo" property="Tipo" behavior="readwrite" uniqueId="c49b2d95-0ed1-43c0-90bd-587f8946a420" type="System.String">
+          <orm:column name="tipo" sql-type="varchar" nullable="true" length="20" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_color" property="Color" behavior="readwrite" uniqueId="6735b134-7643-4a21-96e5-8e931a64678f" type="System.String">
+          <orm:column name="color" sql-type="varchar" nullable="true" length="20" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_fabricante" property="Fabricante" behavior="readwrite" uniqueId="bbbbb62a-d913-4917-8e41-cbe027c62610" type="System.String">
+          <orm:column name="fabricante" sql-type="varchar" nullable="true" length="20" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_capacidad" property="Capacidad" behavior="readwrite" uniqueId="dffd7f60-d1ca-4c84-a3da-c1b7dddbdfde" type="System.String">
+          <orm:column name="capacidad" sql-type="varchar" nullable="true" length="20" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_tipo_Combust" property="Tipo_combust" behavior="readwrite" uniqueId="8400cf05-60b7-4d90-b71e-66c2d8ad3af7" type="System.String">
+          <orm:column name="tipo_combust" sql-type="varchar" nullable="true" length="20" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_estado" property="Estado" behavior="readwrite" uniqueId="b7b40144-b411-4e38-89b5-90826fcf9776" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="estado" sql-type="bool" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="_programacions" property="Programacions" behavior="readwrite" uniqueId="312e0d9c-96a2-499b-9fd4-65e97ffb5144" type="ORM_STM.Programacion">
+          <orm:collection element-class="ORM_STM.Programacion" inverse-field="_bu" managed="true" order-by="" uniqueId="866d3535-3323-4094-8dd8-1a9216859fd6" />
+        </orm:field>
+      </orm:class>
+    </orm:namespace>
+    <orm:schema schema="">
+      <orm:table name="tarjeta_personalizada">
+        <orm:column name="id" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="saldo" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="estado" sql-type="bool" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="id_estacion" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="id_cliente" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="nombre" sql-type="varchar" nullable="true" length="20" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="telefono" sql-type="varchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+      </orm:table>
+      <orm:table name="tarjeta">
+        <orm:column name="id" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="saldo" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="estado" sql-type="bool" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="id_estacion" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:constraint name="tarjeta_id_estacion_fkey" destination-table="estacion">
+          <orm:column name="id_estacion" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:constraint>
+      </orm:table>
+      <orm:table name="solicitud_reclamo">
+        <orm:column name="id_tarjeta" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="id_estacion" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="tipo" sql-type="varchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="descripcion" sql-type="varchar" nullable="true" length="100" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:constraint name="solicitud_reclamo_id_estacion_fkey" destination-table="estacion">
+          <orm:column name="id_estacion" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:constraint>
+        <orm:constraint name="solicitud_reclamo_id_tarjeta_fkey" destination-table="tarjeta">
+          <orm:column name="id_tarjeta" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:constraint>
+      </orm:table>
+      <orm:table name="ruta">
+        <orm:column name="id" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="descripcion" sql-type="varchar" nullable="true" length="100" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="fecha_creacion" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        <orm:column name="estado" sql-type="bool" nullable="true" length="0" scale="0" ado-type="Bit" />
+      </orm:table>
+      <orm:table name="recargas">
+        <orm:column name="id_estacion" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="id_tarjeta" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="fecha" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        <orm:column name="hora" sql-type="time" nullable="true" length="0" scale="0" ado-type="Time" />
+        <orm:constraint name="recargas_id_estacion_fkey" destination-table="estacion">
+          <orm:column name="id_estacion" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:constraint>
+        <orm:constraint name="recargas_id_tarjeta_fkey" destination-table="tarjeta">
+          <orm:column name="id_tarjeta" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:constraint>
+      </orm:table>
+      <orm:table name="programacion">
+        <orm:column name="id_bus" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="id_ruta" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="id_empleado" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="fecha" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        <orm:column name="horario" sql-type="varchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:constraint name="programacion_id_bus_fkey" destination-table="bus">
+          <orm:column name="id_bus" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:constraint>
+        <orm:constraint name="programacion_id_empleado_fkey" destination-table="empleado">
+          <orm:column name="id_empleado" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:constraint>
+        <orm:constraint name="programacion_id_ruta_fkey" destination-table="ruta">
+          <orm:column name="id_ruta" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:constraint>
+      </orm:table>
+      <orm:table name="estacion">
+        <orm:column name="id" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="nombre" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="direccion" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="estado" sql-type="bool" nullable="true" length="0" scale="0" ado-type="Bit" />
+      </orm:table>
+      <orm:table name="empleado">
+        <orm:column name="id" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="nombre" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="tipo_id" sql-type="varchar" nullable="true" length="20" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="cargo" sql-type="varchar" nullable="true" length="20" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="email" sql-type="varchar" nullable="true" length="20" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="direccion" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="telefono" sql-type="varchar" nullable="true" length="20" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="salario" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="estado" sql-type="bool" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="id_estacion" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:constraint name="empleado_id_estacion_fkey" destination-table="estacion">
+          <orm:column name="id_estacion" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:constraint>
+      </orm:table>
+      <orm:table name="consumo">
+        <orm:column name="id_estacion" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="id_tarjeta" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="fecha" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        <orm:column name="hora" sql-type="time" nullable="true" length="0" scale="0" ado-type="Time" />
+        <orm:constraint name="consumo_id_estacion_fkey" destination-table="estacion">
+          <orm:column name="id_estacion" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:constraint>
+        <orm:constraint name="consumo_id_tarjeta_fkey" destination-table="tarjeta">
+          <orm:column name="id_tarjeta" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:constraint>
+      </orm:table>
+      <orm:table name="bus">
+        <orm:column name="id" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="fecha_adq" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        <orm:column name="modelo" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="placa" sql-type="varchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="tipo" sql-type="varchar" nullable="true" length="20" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="color" sql-type="varchar" nullable="true" length="20" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="fabricante" sql-type="varchar" nullable="true" length="20" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="capacidad" sql-type="varchar" nullable="true" length="20" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="tipo_combust" sql-type="varchar" nullable="true" length="20" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="estado" sql-type="bool" nullable="true" length="0" scale="0" ado-type="Bit" />
+      </orm:table>
+    </orm:schema>
+    <orm:relational-naming-settings>
+      <orm:remove-camel-case>False</orm:remove-camel-case>
+      <orm:source-strategy>Property</orm:source-strategy>
+    </orm:relational-naming-settings>
+  </orm:orm>
+  <ModelSettings xmlns="">
+    <AppConfigConnectionPropertyName>Coneccion</AppConfigConnectionPropertyName>
+    <AppConfigConnectionString>Server=localhost;Port=5432;Database=STM;UserId=postgres;Password=cir0324</AppConfigConnectionString>
+    <NamingSettings>
+      <ClassRules>
+        <CaseMode>PascalCase</CaseMode>
+        <PluralizationMode>Singularize</PluralizationMode>
+      </ClassRules>
+      <FieldRules>
+        <AddPrefix>_</AddPrefix>
+        <CaseMode>CamelCase</CaseMode>
+      </FieldRules>
+      <PropertyRules>
+        <CaseMode>PascalCase</CaseMode>
+      </PropertyRules>
+    </NamingSettings>
+    <CodeGenerationSettings>
+      <MappingDefinitionType>Xml</MappingDefinitionType>
+    </CodeGenerationSettings>
+    <SchemaUpdateSettings />
+    <BackendConfigurationSettings>
+      <BackendConfiguration>
+        <Backend>PostgreSql</Backend>
+        <ProviderName>Npgsql</ProviderName>
+      </BackendConfiguration>
+    </BackendConfigurationSettings>
+  </ModelSettings>
+  <Types>
+    <DomainClass Id="9f1127d9-2283-483d-b2fc-a1822213e862" name="Tarjeta_personalizada" namespace="ORM_STM" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="1b9697e2-3062-4974-853b-ad90ff2dfe0f" name="Id" type="Int32" label="Id : Int32" kind="Persistent" identity="true" fieldName="_id" />
+      <Property Id="c3078b73-2b16-4a48-b5cc-5a18a7407db8" name="Estado" type="Boolean" label="Estado : Boolean" nullable="true" kind="Persistent" fieldName="_estado" />
+      <Property Id="e89f8c76-ae09-4505-9d43-c22c032a8227" name="Id_cliente" type="Int32" label="Id_cliente : Int32" nullable="true" kind="Persistent" fieldName="_id_Cliente" />
+      <Property Id="40804ca4-9057-4b6d-b4a7-34a238d76897" name="Id_estacion" type="Int32" label="Id_estacion : Int32" nullable="true" kind="Persistent" fieldName="_id_Estacion" />
+      <Property Id="eb532085-b263-4359-96a9-bf1e0b000f6f" name="Nombre" label="Nombre : String" kind="Persistent" fieldName="_nombre" />
+      <Property Id="676109a2-cbc5-434e-ab19-1ee47a48cb53" name="Saldo" type="Int32" label="Saldo : Int32" nullable="true" kind="Persistent" fieldName="_saldo" />
+      <Property Id="af45467a-8948-4221-adc5-42bbdc5d446e" name="Telefono" label="Telefono : String" kind="Persistent" fieldName="_telefono" />
+    </DomainClass>
+    <DomainClass Id="d285a415-ce86-4df2-b074-52e63cb2f440" name="Tarjetum" namespace="ORM_STM" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="981069e6-d27f-4bf9-99b8-199a17096770" name="Id" type="Int32" label="Id : Int32" kind="Persistent" identity="true" fieldName="_id" />
+      <Property Id="0e97e357-316a-4131-9e5f-b151a42fe4f1" name="Estado" type="Boolean" label="Estado : Boolean" nullable="true" kind="Persistent" fieldName="_estado" />
+      <Property Id="a01275b9-c6ff-4cc6-86ba-fe721c4188cd" name="Id_estacion" type="Int32" label="Id_estacion : Int32" nullable="true" kind="Persistent" fieldName="_id_Estacion" />
+      <Property Id="ef88c204-ebd6-44ae-bbfe-1d49adcfb0db" name="Saldo" type="Int32" label="Saldo : Int32" nullable="true" kind="Persistent" fieldName="_saldo" />
+      <AssociationTargets>
+        <Association Id="1efe7512-8600-46a7-98ce-12d0a4257ee1" SourceMultiplicity="ZeroOne" name="TarjetumHasEstacion">
+          <DomainClassMoniker name="/EntitiesModel/Estacion" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="4a6bc210-2b85-4053-a60e-3c83faf0ea05">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Estacion/Tarjeta" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="fc387d19-a2ed-45b3-9af1-586400906f34">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Tarjetum/Estacion" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+      </AssociationTargets>
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="8cddf1e7-d2fb-4e43-b78e-88a8733b850b">
+          <NavigationalProperty Id="bcd76ab4-bf3c-492d-a2e5-ddc132bf9ce9" name="Estacion" type="Estacion" label="Estacion : Estacion" nullable="true" kind="Persistent" fieldName="_estacion" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="725f786f-da6d-41d1-a285-e514bb8d39a5">
+          <NavigationalProperty Id="4d66a6a1-983e-4dae-ad3f-7ac271f828d1" name="Solicitud_reclamos" type="IList&lt;Solicitud_reclamo&gt;" label="Solicitud_reclamos : IList&lt;Solicitud_reclamo&gt;" nullable="true" kind="Persistent" fieldName="_solicitud_Reclamos" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="e106aec5-3ab2-4e6e-b898-fb5004fb07e7">
+          <NavigationalProperty Id="c5b1cad9-9e9c-46a8-9f73-f291a6c87ab0" name="Recargas" type="IList&lt;Recarga&gt;" label="Recargas : IList&lt;Recarga&gt;" nullable="true" kind="Persistent" fieldName="_recargas" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="eea89ed5-265b-461e-9572-a2b395e3d49b">
+          <NavigationalProperty Id="d2362bb7-3509-40c8-81c3-32262c0db4c9" name="Consumos" type="IList&lt;Consumo&gt;" label="Consumos : IList&lt;Consumo&gt;" nullable="true" kind="Persistent" fieldName="_consumos" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="7a768134-3dc5-4b9f-9961-796b06638d33" name="Solicitud_reclamo" namespace="ORM_STM" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="2c6112ef-c41e-443c-bddf-252a7c47dffe" name="Id_estacion" type="Int32" label="Id_estacion : Int32" kind="Persistent" identity="true" fieldName="_id_Estacion" />
+      <Property Id="8e4ca5e4-2e83-4824-aed2-cfb5c51d52b9" name="Id_tarjeta" type="Int32" label="Id_tarjeta : Int32" kind="Persistent" identity="true" fieldName="_id_Tarjeta" />
+      <Property Id="02e23287-e47d-4062-a3d4-13772235214a" name="Descripcion" label="Descripcion : String" kind="Persistent" fieldName="_descripcion" />
+      <Property Id="ba4c95e0-241f-41fa-8a8b-4eabcadabf71" name="Tipo" label="Tipo : String" kind="Persistent" fieldName="_tipo" />
+      <AssociationTargets>
+        <Association Id="7dc66575-6f6c-4cb6-81c5-89a3ee7ecaf5" SourceMultiplicity="One" name="Solicitud_reclamoHasEstacion">
+          <DomainClassMoniker name="/EntitiesModel/Estacion" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="d94ce014-e448-4fa8-b748-34c26efe7e3b">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Estacion/Solicitud_reclamos" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="f312d1a6-fa67-4d54-934d-3caa62608ee0">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Solicitud_reclamo/Estacion" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+        <Association Id="f4f10a8c-a293-483c-ad49-29bf50385344" SourceMultiplicity="One" name="Solicitud_reclamoHasTarjetum">
+          <DomainClassMoniker name="/EntitiesModel/Tarjetum" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="0cd62045-c428-40a8-9ac9-48541a3b1c98">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Tarjetum/Solicitud_reclamos" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="72359431-481e-4581-ad1e-9ec5886f9f15">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Solicitud_reclamo/Tarjetum" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+      </AssociationTargets>
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="0a93d450-db94-45cf-b734-6be69dc1d997">
+          <NavigationalProperty Id="970d406f-8fe0-421f-95e2-8ce3894a983e" name="Estacion" type="Estacion" label="Estacion : Estacion" nullable="true" kind="Persistent" fieldName="_estacion" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="20fd3071-55c7-4f85-9889-23d9dbafed6b">
+          <NavigationalProperty Id="96d829fd-a23a-45bc-a90d-e9b8eb7202ba" name="Tarjetum" type="Tarjetum" label="Tarjetum : Tarjetum" nullable="true" kind="Persistent" fieldName="_tarjetum" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="4a6c5fb3-e91c-48a7-a7d0-2dbad973183b" name="Rutum" namespace="ORM_STM" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="4d8f7913-4af9-4ccf-b5e5-f3a26374895a" name="Id" type="Int32" label="Id : Int32" kind="Persistent" identity="true" fieldName="_id" />
+      <Property Id="5e7ca66b-5857-4eb4-8536-b8f94310d8ce" name="Descripcion" label="Descripcion : String" kind="Persistent" fieldName="_descripcion" />
+      <Property Id="0f8abf15-9fa6-471b-9ba1-8e91f75ab050" name="Estado" type="Boolean" label="Estado : Boolean" nullable="true" kind="Persistent" fieldName="_estado" />
+      <Property Id="a14c8a0e-5190-41d9-a8e2-009e3d018a1c" name="Fecha_creacion" type="DateTime" label="Fecha_creacion : DateTime" nullable="true" kind="Persistent" fieldName="_fecha_Creacion" />
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="53251dbe-011a-4ade-ab99-07c67b5eeecd">
+          <NavigationalProperty Id="8f3e7825-2a18-4d6e-91ee-b615c956d20b" name="Programacions" type="IList&lt;Programacion&gt;" label="Programacions : IList&lt;Programacion&gt;" nullable="true" kind="Persistent" fieldName="_programacions" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="1145c38b-3ff7-4fd9-8461-ea2548fa3fd5" name="Recarga" namespace="ORM_STM" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="8b038ddc-1fbf-4a07-a1ac-352d85ee43c1" name="Id_estacion" type="Int32" label="Id_estacion : Int32" kind="Persistent" identity="true" fieldName="_id_Estacion" />
+      <Property Id="1711b642-bb4f-48d6-99cc-d7d35e58bd93" name="Id_tarjeta" type="Int32" label="Id_tarjeta : Int32" kind="Persistent" identity="true" fieldName="_id_Tarjeta" />
+      <Property Id="803733d0-7162-4303-a142-72143fa235eb" name="Fecha" type="DateTime" label="Fecha : DateTime" nullable="true" kind="Persistent" fieldName="_fecha" />
+      <Property Id="1d50d14d-5efc-43a4-bf88-a8071119893f" name="Hora" type="DateTime" label="Hora : DateTime" nullable="true" kind="Persistent" fieldName="_hora" />
+      <AssociationTargets>
+        <Association Id="cc43d2b1-cd03-4eed-804c-179be82edcc2" SourceMultiplicity="One" name="RecargaHasEstacion">
+          <DomainClassMoniker name="/EntitiesModel/Estacion" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="bd301d07-a9fc-46ba-aa81-1e411d152ca7">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Estacion/Recargas" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="c676d3dd-9aa9-4973-8078-acc9312f2ddf">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Recarga/Estacion" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+        <Association Id="b6e76637-d682-4aed-8dbf-c059698d6e94" SourceMultiplicity="One" name="RecargaHasTarjetum">
+          <DomainClassMoniker name="/EntitiesModel/Tarjetum" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="9148fc31-d5f6-4729-9e3f-0e7ceb813d20">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Tarjetum/Recargas" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="f4474f78-9d06-4bce-ae32-781c98e5a37c">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Recarga/Tarjetum" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+      </AssociationTargets>
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="2aa359f8-482b-4fce-9eaf-59d3dee653dd">
+          <NavigationalProperty Id="8cb5bef4-1f74-44b3-8dcb-e303b305803f" name="Estacion" type="Estacion" label="Estacion : Estacion" nullable="true" kind="Persistent" fieldName="_estacion" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="75803be6-a172-4003-b999-e389bc790da0">
+          <NavigationalProperty Id="ec9042cd-3353-4c68-95e5-2e69fb54fea2" name="Tarjetum" type="Tarjetum" label="Tarjetum : Tarjetum" nullable="true" kind="Persistent" fieldName="_tarjetum" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="4e024609-c206-4dec-a190-39594e314081" name="Programacion" namespace="ORM_STM" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="320b2d8b-a5b2-4df4-90cd-fb078d2ad601" name="Id_bus" type="Int32" label="Id_bus : Int32" kind="Persistent" identity="true" fieldName="_id_Bus" />
+      <Property Id="1a77fe51-e637-47ee-be19-d6341c66a8f8" name="Id_empleado" type="Int32" label="Id_empleado : Int32" kind="Persistent" identity="true" fieldName="_id_Empleado" />
+      <Property Id="fa6c23ae-b302-4aca-b019-f212d6b79716" name="Id_ruta" type="Int32" label="Id_ruta : Int32" kind="Persistent" identity="true" fieldName="_id_Ruta" />
+      <Property Id="aaddb6cb-e1fb-42b7-bc51-17a87467f9dc" name="Fecha" type="DateTime" label="Fecha : DateTime" nullable="true" kind="Persistent" fieldName="_fecha" />
+      <Property Id="e3105558-9fc4-4781-a29e-ec12e992e297" name="Horario" label="Horario : String" kind="Persistent" fieldName="_horario" />
+      <AssociationTargets>
+        <Association Id="866d3535-3323-4094-8dd8-1a9216859fd6" SourceMultiplicity="One" name="ProgramacionHasBu">
+          <DomainClassMoniker name="/EntitiesModel/Bu" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="eddf0484-b1d9-4de5-9d93-440007c5cf28">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Bu/Programacions" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="eff7413d-0d68-4d1f-b393-2897af5360f6">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Programacion/Bu" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+        <Association Id="623066a9-2a91-402a-a775-4a4974773987" SourceMultiplicity="One" name="ProgramacionHasEmpleado">
+          <DomainClassMoniker name="/EntitiesModel/Empleado" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="884c9805-239b-4176-9edc-32bd81aa05d0">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Empleado/Programacions" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="f926e79e-c78c-43c1-9183-b125a3b54627">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Programacion/Empleado" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+        <Association Id="3a609b33-8eb8-45ea-b668-e9e585750f69" SourceMultiplicity="One" name="ProgramacionHasRutum">
+          <DomainClassMoniker name="/EntitiesModel/Rutum" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="2ffa04e9-47e3-4246-a766-89630ffb80e9">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Rutum/Programacions" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="0873dc98-f4f4-416a-8db0-7a1370e5cf41">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Programacion/Rutum" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+      </AssociationTargets>
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="0be3c25f-d26a-4933-a845-84ffa9e019cc">
+          <NavigationalProperty Id="7da0c496-caa3-4519-8f2e-e2de4fad4894" name="Bu" type="Bu" label="Bu : Bu" nullable="true" kind="Persistent" fieldName="_bu" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="4756f729-01cc-4f93-bb3b-a2e7d1541691">
+          <NavigationalProperty Id="28aea345-de1f-4e34-bd06-a5b4aec9ce33" name="Empleado" type="Empleado" label="Empleado : Empleado" nullable="true" kind="Persistent" fieldName="_empleado" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="19326240-b377-4948-9d8b-873df3bb63ef">
+          <NavigationalProperty Id="6955e631-2e14-4d2b-9062-e3a3fe00dbea" name="Rutum" type="Rutum" label="Rutum : Rutum" nullable="true" kind="Persistent" fieldName="_rutum" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="687348bc-12a9-4cb4-b020-62778661cee2" name="Estacion" namespace="ORM_STM" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="18c0cf6f-b794-4f18-95a7-3c399ff137b9" name="Id" type="Int32" label="Id : Int32" kind="Persistent" identity="true" fieldName="_id" />
+      <Property Id="840b870d-0f5b-404f-949a-66c7dca1bb48" name="Direccion" label="Direccion : String" kind="Persistent" fieldName="_direccion" />
+      <Property Id="35df665b-9941-4005-a538-f4ff07ecd479" name="Estado" type="Boolean" label="Estado : Boolean" nullable="true" kind="Persistent" fieldName="_estado" />
+      <Property Id="9b805c22-00b0-4da0-a87d-1b0671da6e65" name="Nombre" label="Nombre : String" kind="Persistent" fieldName="_nombre" />
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="a848ce21-111e-435a-ad0f-cc9374b23ac2">
+          <NavigationalProperty Id="cc40454f-215c-4c08-b895-fe7ccee7681a" name="Tarjeta" type="IList&lt;Tarjetum&gt;" label="Tarjeta : IList&lt;Tarjetum&gt;" nullable="true" kind="Persistent" fieldName="_tarjeta" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="efea986b-3788-4bf5-8004-0f5dbe1e97d2">
+          <NavigationalProperty Id="b49c438b-ff37-4327-993f-de9d8ff7a62c" name="Solicitud_reclamos" type="IList&lt;Solicitud_reclamo&gt;" label="Solicitud_reclamos : IList&lt;Solicitud_reclamo&gt;" nullable="true" kind="Persistent" fieldName="_solicitud_Reclamos" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="5aa63fe0-0468-4f30-88d2-c0787cf8bc33">
+          <NavigationalProperty Id="1bc11e81-62ec-4370-87d8-b75bb3fddd77" name="Recargas" type="IList&lt;Recarga&gt;" label="Recargas : IList&lt;Recarga&gt;" nullable="true" kind="Persistent" fieldName="_recargas" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="70482130-7b3b-49c2-b9ad-271a032d0b38">
+          <NavigationalProperty Id="8e77ab79-cae6-4f82-914d-442a8fd4d1b0" name="Empleados" type="IList&lt;Empleado&gt;" label="Empleados : IList&lt;Empleado&gt;" nullable="true" kind="Persistent" fieldName="_empleados" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="3f5d94ce-b262-4af6-bc9a-841c974b18e7">
+          <NavigationalProperty Id="82db5478-adaf-41c1-a1fe-fe9f46e2f049" name="Consumos" type="IList&lt;Consumo&gt;" label="Consumos : IList&lt;Consumo&gt;" nullable="true" kind="Persistent" fieldName="_consumos" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="9953dbb0-7b9c-48dd-98ea-3e265262c43b" name="Empleado" namespace="ORM_STM" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="a4e7d291-73c0-45ee-873f-8805295950df" name="Id" type="Int32" label="Id : Int32" kind="Persistent" identity="true" fieldName="_id" />
+      <Property Id="05fef137-10b0-45b5-ae5c-0e9d2280823c" name="Cargo" label="Cargo : String" kind="Persistent" fieldName="_cargo" />
+      <Property Id="ed9d46df-588e-400e-a5ee-69d54095c6f8" name="Direccion" label="Direccion : String" kind="Persistent" fieldName="_direccion" />
+      <Property Id="944fde23-b376-4a41-a3ef-04e7732f3464" name="Email" label="Email : String" kind="Persistent" fieldName="_email" />
+      <Property Id="200f593b-67b8-4c5d-9f40-af48e13c8683" name="Estado" type="Boolean" label="Estado : Boolean" nullable="true" kind="Persistent" fieldName="_estado" />
+      <Property Id="77aae982-7e7d-4ff8-bf13-df588a7295ee" name="Id_estacion" type="Int32" label="Id_estacion : Int32" nullable="true" kind="Persistent" fieldName="_id_Estacion" />
+      <Property Id="c8f6b8d1-6dad-4957-b451-9a80f9abc19e" name="Nombre" label="Nombre : String" kind="Persistent" fieldName="_nombre" />
+      <Property Id="30a246ab-d54c-4910-9812-091860066a19" name="Salario" type="Int32" label="Salario : Int32" nullable="true" kind="Persistent" fieldName="_salario" />
+      <Property Id="312a8fe4-69ab-4520-bd58-b4831d6b5223" name="Telefono" label="Telefono : String" kind="Persistent" fieldName="_telefono" />
+      <Property Id="0b4411af-5cd9-4b83-8397-9b5107134ec4" name="Tipo_id" label="Tipo_id : String" kind="Persistent" fieldName="_tipo_Id" />
+      <AssociationTargets>
+        <Association Id="70469da6-8138-4b02-b966-bdd8365b67cd" SourceMultiplicity="ZeroOne" name="EmpleadoHasEstacion">
+          <DomainClassMoniker name="/EntitiesModel/Estacion" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="297f031a-2295-44db-94f4-6028c0c2c46a">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Estacion/Empleados" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="b2657321-2906-4b97-953f-0c3e5573ce4d">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Empleado/Estacion" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+      </AssociationTargets>
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="a2a4d3b5-2c56-4451-8380-25b4fdd348cf">
+          <NavigationalProperty Id="9f646223-ef59-4d36-bcce-0d0d76dd833b" name="Programacions" type="IList&lt;Programacion&gt;" label="Programacions : IList&lt;Programacion&gt;" nullable="true" kind="Persistent" fieldName="_programacions" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="d452e498-21ab-4a57-b81b-e1ab65cf07d7">
+          <NavigationalProperty Id="d7226108-16ab-48c1-adae-2790891ceddf" name="Estacion" type="Estacion" label="Estacion : Estacion" nullable="true" kind="Persistent" fieldName="_estacion" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="baf188e7-664d-4d8b-ac2f-f85160218f14" name="Consumo" namespace="ORM_STM" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="46509c02-abe1-4371-81f6-624384f99fef" name="Id_estacion" type="Int32" label="Id_estacion : Int32" kind="Persistent" identity="true" fieldName="_id_Estacion" />
+      <Property Id="92fc25dc-728a-405d-a979-c6b48aae8951" name="Id_tarjeta" type="Int32" label="Id_tarjeta : Int32" kind="Persistent" identity="true" fieldName="_id_Tarjeta" />
+      <Property Id="210b1de1-77cb-4775-8144-c69bc731ed81" name="Fecha" type="DateTime" label="Fecha : DateTime" nullable="true" kind="Persistent" fieldName="_fecha" />
+      <Property Id="7e444a08-311e-4323-b48c-db07f5d331f5" name="Hora" type="DateTime" label="Hora : DateTime" nullable="true" kind="Persistent" fieldName="_hora" />
+      <AssociationTargets>
+        <Association Id="8790aab6-f203-43d2-92e7-74563a8a5319" SourceMultiplicity="One" name="ConsumoHasEstacion">
+          <DomainClassMoniker name="/EntitiesModel/Estacion" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="cbb0ad79-fc53-426b-8bff-185be402d801">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Estacion/Consumos" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="b622936c-c9f0-4cef-b772-20cc7efef2b5">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Consumo/Estacion" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+        <Association Id="9d2006f1-0362-4b8c-ac83-6ceda8f05db3" SourceMultiplicity="One" name="ConsumoHasTarjetum">
+          <DomainClassMoniker name="/EntitiesModel/Tarjetum" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="5b25a46b-7c5a-4743-93d8-e22b14553cdd">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Tarjetum/Consumos" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="bc2e0112-4145-4021-a64c-f108f3f1d687">
+              <NavigationalPropertyMoniker name="/EntitiesModel/Consumo/Tarjetum" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+      </AssociationTargets>
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="ec759bf7-ca05-4fcd-a04a-4ac166107912">
+          <NavigationalProperty Id="96dc50ee-acd4-43e9-92e8-476bd66ada70" name="Estacion" type="Estacion" label="Estacion : Estacion" nullable="true" kind="Persistent" fieldName="_estacion" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="8b215e4d-d278-4e40-afb5-d86e7cc422b2">
+          <NavigationalProperty Id="a18a0562-aa56-491f-b4ad-516d83fa0cf9" name="Tarjetum" type="Tarjetum" label="Tarjetum : Tarjetum" nullable="true" kind="Persistent" fieldName="_tarjetum" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="d102a0a8-3070-43ac-8f8c-30c97e92104a" name="Bu" namespace="ORM_STM" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="9a15fe0e-436f-49b4-9f67-ff21683415f8" name="Id" type="Int32" label="Id : Int32" kind="Persistent" identity="true" fieldName="_id" />
+      <Property Id="dffd7f60-d1ca-4c84-a3da-c1b7dddbdfde" name="Capacidad" label="Capacidad : String" kind="Persistent" fieldName="_capacidad" />
+      <Property Id="6735b134-7643-4a21-96e5-8e931a64678f" name="Color" label="Color : String" kind="Persistent" fieldName="_color" />
+      <Property Id="b7b40144-b411-4e38-89b5-90826fcf9776" name="Estado" type="Boolean" label="Estado : Boolean" nullable="true" kind="Persistent" fieldName="_estado" />
+      <Property Id="bbbbb62a-d913-4917-8e41-cbe027c62610" name="Fabricante" label="Fabricante : String" kind="Persistent" fieldName="_fabricante" />
+      <Property Id="e8d9aa20-08c0-4633-b9f1-1b3cfbfd2c30" name="Fecha_adq" type="DateTime" label="Fecha_adq : DateTime" nullable="true" kind="Persistent" fieldName="_fecha_Adq" />
+      <Property Id="a88d4370-5663-432a-a1fe-2c1732c3e9b2" name="Modelo" label="Modelo : String" kind="Persistent" fieldName="_modelo" />
+      <Property Id="d745a96d-64d2-4ee5-9ab2-9c11e0acfa37" name="Placa" label="Placa : String" kind="Persistent" fieldName="_placa" />
+      <Property Id="c49b2d95-0ed1-43c0-90bd-587f8946a420" name="Tipo" label="Tipo : String" kind="Persistent" fieldName="_tipo" />
+      <Property Id="8400cf05-60b7-4d90-b71e-66c2d8ad3af7" name="Tipo_combust" label="Tipo_combust : String" kind="Persistent" fieldName="_tipo_Combust" />
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="f1de6a84-8a81-451a-8a48-f48ca4017718">
+          <NavigationalProperty Id="312e0d9c-96a2-499b-9fd4-65e97ffb5144" name="Programacions" type="IList&lt;Programacion&gt;" label="Programacions : IList&lt;Programacion&gt;" nullable="true" kind="Persistent" fieldName="_programacions" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+  </Types>
+  <domainContext>
+    <domainModelHasDomainContext Id="7a31f4c6-475f-4cf1-9b4a-260dbaf0c29a">
+      <domainContainer name="EntitiesModel" namespace="ORM_STM" showPropertiesCompartment="true">
+        <entitySetProperty name="Tarjeta_personalizadas" namespace="ORM_STM" type="Tarjeta_personalizada" label="Tarjeta_personalizadas : IQueryable&lt;ORM_STM.Tarjeta_personalizada&gt;" />
+        <entitySetProperty name="Tarjeta" namespace="ORM_STM" type="Tarjetum" label="Tarjeta : IQueryable&lt;ORM_STM.Tarjetum&gt;" />
+        <entitySetProperty name="Solicitud_reclamos" namespace="ORM_STM" type="Solicitud_reclamo" label="Solicitud_reclamos : IQueryable&lt;ORM_STM.Solicitud_reclamo&gt;" />
+        <entitySetProperty name="Ruta" namespace="ORM_STM" type="Rutum" label="Ruta : IQueryable&lt;ORM_STM.Rutum&gt;" />
+        <entitySetProperty name="Recargas" namespace="ORM_STM" type="Recarga" label="Recargas : IQueryable&lt;ORM_STM.Recarga&gt;" />
+        <entitySetProperty name="Programacions" namespace="ORM_STM" type="Programacion" label="Programacions : IQueryable&lt;ORM_STM.Programacion&gt;" />
+        <entitySetProperty name="Estacions" namespace="ORM_STM" type="Estacion" label="Estacions : IQueryable&lt;ORM_STM.Estacion&gt;" />
+        <entitySetProperty name="Empleados" namespace="ORM_STM" type="Empleado" label="Empleados : IQueryable&lt;ORM_STM.Empleado&gt;" />
+        <entitySetProperty name="Consumos" namespace="ORM_STM" type="Consumo" label="Consumos : IQueryable&lt;ORM_STM.Consumo&gt;" />
+        <entitySetProperty name="Bus" namespace="ORM_STM" type="Bu" label="Bus : IQueryable&lt;ORM_STM.Bu&gt;" />
+      </domainContainer>
+    </domainModelHasDomainContext>
+  </domainContext>
+</DomainModel>
