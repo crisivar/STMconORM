@@ -44,6 +44,7 @@ namespace WindowsFormsApplication1
             String mail=tbEmail.Text;
             String car= cbCargo.Text;
             int sal = int.Parse(tbSalario.Text);
+            int est = int.Parse(estacion.Text);
 
             cEmp.AñadirEmpleado(id,tipId,nom,mail,dir,tel,car,civil,sal);
             MessageBox.Show("el registro fue exitoso", null);

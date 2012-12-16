@@ -48,6 +48,8 @@
             this.cbCargo = new System.Windows.Forms.ComboBox();
             this.btCancelar = new System.Windows.Forms.Button();
             this.btRegistrar = new System.Windows.Forms.Button();
+            this.Es = new System.Windows.Forms.Label();
+            this.estacion = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbID
@@ -214,7 +216,7 @@
             // 
             // btCancelar
             // 
-            this.btCancelar.Location = new System.Drawing.Point(182, 418);
+            this.btCancelar.Location = new System.Drawing.Point(183, 457);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
             this.btCancelar.TabIndex = 19;
@@ -224,7 +226,7 @@
             // 
             // btRegistrar
             // 
-            this.btRegistrar.Location = new System.Drawing.Point(60, 418);
+            this.btRegistrar.Location = new System.Drawing.Point(60, 457);
             this.btRegistrar.Name = "btRegistrar";
             this.btRegistrar.Size = new System.Drawing.Size(75, 23);
             this.btRegistrar.TabIndex = 18;
@@ -232,11 +234,29 @@
             this.btRegistrar.UseVisualStyleBackColor = true;
             this.btRegistrar.Click += new System.EventHandler(this.btRegistrar_Click);
             // 
+            // Es
+            // 
+            this.Es.AutoSize = true;
+            this.Es.Location = new System.Drawing.Point(16, 413);
+            this.Es.Name = "Es";
+            this.Es.Size = new System.Drawing.Size(48, 13);
+            this.Es.TabIndex = 20;
+            this.Es.Text = "Estacion";
+            // 
+            // estacion
+            // 
+            this.estacion.Location = new System.Drawing.Point(123, 406);
+            this.estacion.Name = "estacion";
+            this.estacion.Size = new System.Drawing.Size(195, 20);
+            this.estacion.TabIndex = 21;
+            // 
             // RegistroEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(340, 463);
+            this.ClientSize = new System.Drawing.Size(340, 492);
+            this.Controls.Add(this.estacion);
+            this.Controls.Add(this.Es);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btRegistrar);
             this.Controls.Add(this.cbCargo);
@@ -287,5 +307,7 @@
         private System.Windows.Forms.ComboBox cbCargo;
         private System.Windows.Forms.Button btCancelar;
         private System.Windows.Forms.Button btRegistrar;
+        private System.Windows.Forms.Label Es;
+        private System.Windows.Forms.TextBox estacion;
     }
 }
