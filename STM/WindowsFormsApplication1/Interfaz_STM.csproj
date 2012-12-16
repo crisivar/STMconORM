@@ -48,11 +48,23 @@
     <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2012.3.1209.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="MenuDOperativo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MenuDOperativo.Designer.cs">
+      <DependentUpon>MenuDOperativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroRuta.Designer.cs">
+      <DependentUpon>RegistroRuta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroTPersonalizada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroTPersonalizada.Designer.cs">
+      <DependentUpon>RegistroTPersonalizada.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistroSolicitud.cs">
       <SubType>Form</SubType>
@@ -92,6 +104,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MenuDOperativo.resx">
+      <DependentUpon>MenuDOperativo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroRuta.resx">
+      <DependentUpon>RegistroRuta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistroSolicitud.resx">
       <DependentUpon>RegistroSolicitud.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +136,9 @@
     </Compile>
     <EmbeddedResource Include="RegistroPasajero.resx">
       <DependentUpon>RegistroPasajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroTPersonalizada.resx">
+      <DependentUpon>RegistroTPersonalizada.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.Config" />
     <None Include="Properties\Settings.settings">
