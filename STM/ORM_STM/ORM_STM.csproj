@@ -49,6 +49,8 @@
       <DependentUpon>EntitiesModel.rlinq</DependentUpon>
     </Compile>
     <Compile Include="Controladores\ControladorBus.cs" />
+    <Compile Include="Controladores\ControladorEstacion.cs" />
+    <Compile Include="Controladores\ControladorRuta.cs" />
     <Compile Include="Empleado.generated.cs">
       <DependentUpon>EntitiesModel.rlinq</DependentUpon>
     </Compile>
@@ -67,7 +69,7 @@
     <Compile Include="Recarga.generated.cs">
       <DependentUpon>EntitiesModel.rlinq</DependentUpon>
     </Compile>
-    <Compile Include="Rutum.generated.cs">
+    <Compile Include="Ruta.generated.cs">
       <DependentUpon>EntitiesModel.rlinq</DependentUpon>
     </Compile>
     <Compile Include="Solicitud_reclamo.generated.cs">

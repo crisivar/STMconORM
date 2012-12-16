@@ -20,12 +20,27 @@ namespace Interfaz_STM
 
             ControladorBus contrB = new ControladorBus();
 
-            contrB.AñadirBus(1111, new DateTime(2010, 1, 18), "asdsd", "asdasd", "asdasd", "asdasd", "adsgfdfg", "fghdgh", "dfhdgh", true);
+           // contrB.AñadirBus(1111, new DateTime(2010, 1, 18), "asdsd", "asdasd", "asdasd", "asdasd", "adsgfdfg", "fghdgh", "dfhdgh", true);
 
             ControladorBus contrEditar = new ControladorBus();
 
             //aca hay un problema que detecta llave duplicada en la base de datos :S
-            contrEditar.EditarBus(new DateTime(2010, 1, 18), "ggggg", "gggggg", "gggggg", "asdasd", "adsgfdfg", "fghdgh", "dfhdgh", true);
+            //contrEditar.EditarBus(new DateTime(2010, 1, 18), "ggggg", "gggggg", "gggggg", "asdasd", "adsgfdfg", "fghdgh", "dfhdgh", true);
+
+
+
+
+            ControladorEstacion contrE = new ControladorEstacion();
+
+            contrE.AñadirEstacion(12345, "Lido", "cra 39 con calle 5ta", true);
+
+            ControladorEstacion contrEditarE = new ControladorEstacion();
+
+            //aca hay un problema que detecta llave duplicada en la base de datos :S
+            contrEditarE.EditarEstacion("asdasd", "asdasdaff", true);
+
+
+
 
 
 

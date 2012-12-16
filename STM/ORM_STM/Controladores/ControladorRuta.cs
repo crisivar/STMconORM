@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-
 namespace ORM_STM.Controladores
 {
-    
-    public class ControladorRuta
+    class ControladorRuta
     {
 
         public void AñadirRuta(int Id, DateTime Fecha_creacion, String descripcion)
