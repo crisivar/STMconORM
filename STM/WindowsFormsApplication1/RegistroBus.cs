@@ -47,5 +47,10 @@ namespace WindowsFormsApplication1
             cBus.AñadirBus(ident,fechita,model,plac,tip,col,fab,capa,com);
 
         }
+
+        private void btCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
