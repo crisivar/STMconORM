@@ -51,6 +51,7 @@
     <Compile Include="Controladores\ControladorBus.cs" />
     <Compile Include="Controladores\ControladorEstacion.cs" />
     <Compile Include="Controladores\ControladorRuta.cs" />
+    <Compile Include="Controladores\ControladorEmpleado.cs" />
     <Compile Include="Empleado.generated.cs">
       <DependentUpon>EntitiesModel.rlinq</DependentUpon>
     </Compile>
