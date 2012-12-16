@@ -77,6 +77,32 @@ namespace ORM_STM
 		    }
 		}
 		
+		private string _respuesta;
+		public virtual string Respuesta 
+		{ 
+		    get
+		    {
+		        return this._respuesta;
+		    }
+		    set
+		    {
+		        this._respuesta = value;
+		    }
+		}
+		
+		private string _estado;
+		public virtual string Estado 
+		{ 
+		    get
+		    {
+		        return this._estado;
+		    }
+		    set
+		    {
+		        this._estado = value;
+		    }
+		}
+		
 		private Estacion _estacion;
 		public virtual Estacion Estacion 
 		{ 

@@ -64,8 +64,8 @@ namespace ORM_STM
 		    }
 		}
 		
-		private DateTime? _fecha;
-		public virtual DateTime? Fecha 
+		private DateTime _fecha;
+		public virtual DateTime Fecha 
 		{ 
 		    get
 		    {

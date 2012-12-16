@@ -85,6 +85,12 @@
         <orm:field name="_descripcion" property="Descripcion" behavior="readwrite" uniqueId="02e23287-e47d-4062-a3d4-13772235214a" type="System.String">
           <orm:column name="descripcion" sql-type="varchar" nullable="true" length="100" scale="0" ado-type="UnicodeStringVariableLength" />
         </orm:field>
+        <orm:field name="_respuesta" property="Respuesta" behavior="readwrite" uniqueId="c116cae2-3dd7-4331-98ae-0a2e754d45a9" type="System.String">
+          <orm:column nullable="true" length="100" name="respuesta" scale="0" sql-type="varchar" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_estado" property="Estado" behavior="readwrite" uniqueId="16be6642-ff82-4f69-8cf9-9328cf936ec1" type="System.String">
+          <orm:column nullable="true" length="100" name="estado" scale="0" sql-type="varchar" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
         <orm:field name="_estacion" property="Estacion" behavior="readwrite" uniqueId="970d406f-8fe0-421f-95e2-8ce3894a983e" type="ORM_STM.Estacion">
           <orm:reference uniqueId="7dc66575-6f6c-4cb6-81c5-89a3ee7ecaf5">
             <orm:sharedfield name="_id_Estacion" target-class="ORM_STM.Estacion" target-field="_id" />
@@ -135,11 +141,11 @@
         <orm:field name="_id_Tarjeta" property="Id_tarjeta" behavior="readwrite" uniqueId="1711b642-bb4f-48d6-99cc-d7d35e58bd93" type="System.Int32">
           <orm:column name="id_tarjeta" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
         </orm:field>
-        <orm:field name="_fecha" property="Fecha" behavior="readwrite" uniqueId="803733d0-7162-4303-a142-72143fa235eb" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
-          <orm:column name="fecha" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        <orm:field name="_fecha" property="Fecha" behavior="readwrite" uniqueId="803733d0-7162-4303-a142-72143fa235eb" type="System.DateTime">
+          <orm:column name="fecha" sql-type="date" nullable="false" length="0" scale="0" primary-key="true" ado-type="Date" />
         </orm:field>
-        <orm:field name="_hora" property="Hora" behavior="readwrite" uniqueId="1d50d14d-5efc-43a4-bf88-a8071119893f" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
-          <orm:column name="hora" sql-type="time" nullable="true" length="0" scale="0" ado-type="Time" />
+        <orm:field name="_hora" property="Hora" behavior="readwrite" uniqueId="1d50d14d-5efc-43a4-bf88-a8071119893f" type="System.DateTime">
+          <orm:column name="hora" sql-type="time" nullable="false" length="0" scale="0" primary-key="true" ado-type="Time" />
         </orm:field>
         <orm:field name="_estacion" property="Estacion" behavior="readwrite" uniqueId="8cb5bef4-1f74-44b3-8dcb-e303b305803f" type="ORM_STM.Estacion">
           <orm:reference uniqueId="cc43d2b1-cd03-4eed-804c-179be82edcc2">
@@ -173,8 +179,8 @@
         <orm:field name="_id_Empleado" property="Id_empleado" behavior="readwrite" uniqueId="1a77fe51-e637-47ee-be19-d6341c66a8f8" type="System.Int32">
           <orm:column name="id_empleado" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
         </orm:field>
-        <orm:field name="_fecha" property="Fecha" behavior="readwrite" uniqueId="aaddb6cb-e1fb-42b7-bc51-17a87467f9dc" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
-          <orm:column name="fecha" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        <orm:field name="_fecha" property="Fecha" behavior="readwrite" uniqueId="aaddb6cb-e1fb-42b7-bc51-17a87467f9dc" type="System.DateTime">
+          <orm:column name="fecha" sql-type="date" nullable="false" length="0" scale="0" primary-key="true" ado-type="Date" />
         </orm:field>
         <orm:field name="_horario" property="Horario" behavior="readwrite" uniqueId="e3105558-9fc4-4781-a29e-ec12e992e297" type="System.String">
           <orm:column name="horario" sql-type="varchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
@@ -293,11 +299,11 @@
         <orm:field name="_id_Tarjeta" property="Id_tarjeta" behavior="readwrite" uniqueId="92fc25dc-728a-405d-a979-c6b48aae8951" type="System.Int32">
           <orm:column name="id_tarjeta" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
         </orm:field>
-        <orm:field name="_fecha" property="Fecha" behavior="readwrite" uniqueId="210b1de1-77cb-4775-8144-c69bc731ed81" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
-          <orm:column name="fecha" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        <orm:field name="_fecha" property="Fecha" behavior="readwrite" uniqueId="210b1de1-77cb-4775-8144-c69bc731ed81" type="System.DateTime">
+          <orm:column name="fecha" sql-type="date" nullable="false" length="0" scale="0" primary-key="true" ado-type="Date" />
         </orm:field>
-        <orm:field name="_hora" property="Hora" behavior="readwrite" uniqueId="7e444a08-311e-4323-b48c-db07f5d331f5" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
-          <orm:column name="hora" sql-type="time" nullable="true" length="0" scale="0" ado-type="Time" />
+        <orm:field name="_hora" property="Hora" behavior="readwrite" uniqueId="7e444a08-311e-4323-b48c-db07f5d331f5" type="System.DateTime">
+          <orm:column name="hora" sql-type="time" nullable="false" length="0" scale="0" primary-key="true" ado-type="Time" />
         </orm:field>
         <orm:field name="_estacion" property="Estacion" behavior="readwrite" uniqueId="96dc50ee-acd4-43e9-92e8-476bd66ada70" type="ORM_STM.Estacion">
           <orm:reference uniqueId="8790aab6-f203-43d2-92e7-74563a8a5319">
@@ -377,6 +383,8 @@
         <orm:column name="id_estacion" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
         <orm:column name="tipo" sql-type="varchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
         <orm:column name="descripcion" sql-type="varchar" nullable="true" length="100" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column nullable="true" length="100" name="respuesta" scale="0" sql-type="varchar" ado-type="UnicodeStringVariableLength" />
+        <orm:column nullable="true" length="100" name="estado" scale="0" sql-type="varchar" ado-type="UnicodeStringVariableLength" />
         <orm:constraint name="solicitud_reclamo_id_estacion_fkey" destination-table="estacion">
           <orm:column name="id_estacion" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
         </orm:constraint>
@@ -393,8 +401,8 @@
       <orm:table name="recargas">
         <orm:column name="id_estacion" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
         <orm:column name="id_tarjeta" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
-        <orm:column name="fecha" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
-        <orm:column name="hora" sql-type="time" nullable="true" length="0" scale="0" ado-type="Time" />
+        <orm:column name="fecha" sql-type="date" nullable="false" length="0" scale="0" primary-key="true" ado-type="Date" />
+        <orm:column name="hora" sql-type="time" nullable="false" length="0" scale="0" primary-key="true" ado-type="Time" />
         <orm:constraint name="recargas_id_estacion_fkey" destination-table="estacion">
           <orm:column name="id_estacion" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
         </orm:constraint>
@@ -406,7 +414,7 @@
         <orm:column name="id_bus" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
         <orm:column name="id_ruta" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
         <orm:column name="id_empleado" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
-        <orm:column name="fecha" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        <orm:column name="fecha" sql-type="date" nullable="false" length="0" scale="0" primary-key="true" ado-type="Date" />
         <orm:column name="horario" sql-type="varchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
         <orm:constraint name="programacion_id_bus_fkey" destination-table="bus">
           <orm:column name="id_bus" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
@@ -442,8 +450,8 @@
       <orm:table name="consumo">
         <orm:column name="id_estacion" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
         <orm:column name="id_tarjeta" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
-        <orm:column name="fecha" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
-        <orm:column name="hora" sql-type="time" nullable="true" length="0" scale="0" ado-type="Time" />
+        <orm:column name="fecha" sql-type="date" nullable="false" length="0" scale="0" primary-key="true" ado-type="Date" />
+        <orm:column name="hora" sql-type="time" nullable="false" length="0" scale="0" primary-key="true" ado-type="Time" />
         <orm:constraint name="consumo_id_estacion_fkey" destination-table="estacion">
           <orm:column name="id_estacion" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
         </orm:constraint>
@@ -471,7 +479,7 @@
   </orm:orm>
   <ModelSettings xmlns="">
     <AppConfigConnectionPropertyName>Coneccion</AppConfigConnectionPropertyName>
-    <AppConfigConnectionString>Server=localhost;Port=5432;Database=STM;UserId=postgres;Password=cir0324</AppConfigConnectionString>
+    <AppConfigConnectionString>server=localhost;port=5432;database=STM;userid=postgres;password=juandaosp</AppConfigConnectionString>
     <NamingSettings>
       <ClassRules>
         <CaseMode>PascalCase</CaseMode>
@@ -546,6 +554,8 @@
       <Property Id="8e4ca5e4-2e83-4824-aed2-cfb5c51d52b9" name="Id_tarjeta" type="Int32" label="Id_tarjeta : Int32" kind="Persistent" identity="true" fieldName="_id_Tarjeta" />
       <Property Id="02e23287-e47d-4062-a3d4-13772235214a" name="Descripcion" label="Descripcion : String" kind="Persistent" fieldName="_descripcion" />
       <Property Id="ba4c95e0-241f-41fa-8a8b-4eabcadabf71" name="Tipo" label="Tipo : String" kind="Persistent" fieldName="_tipo" />
+      <Property Id="c116cae2-3dd7-4331-98ae-0a2e754d45a9" name="Respuesta" label="Respuesta : String" kind="Persistent" fieldName="_respuesta" />
+      <Property Id="16be6642-ff82-4f69-8cf9-9328cf936ec1" name="Estado" label="Estado : String" kind="Persistent" fieldName="_estado" />
       <AssociationTargets>
         <Association Id="7dc66575-6f6c-4cb6-81c5-89a3ee7ecaf5" SourceMultiplicity="One" name="Solicitud_reclamoHasEstacion">
           <DomainClassMoniker name="/EntitiesModel/Estacion" />
@@ -597,8 +607,8 @@
     <DomainClass Id="1145c38b-3ff7-4fd9-8461-ea2548fa3fd5" name="Recarga" namespace="ORM_STM" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
       <Property Id="8b038ddc-1fbf-4a07-a1ac-352d85ee43c1" name="Id_estacion" type="Int32" label="Id_estacion : Int32" kind="Persistent" identity="true" fieldName="_id_Estacion" />
       <Property Id="1711b642-bb4f-48d6-99cc-d7d35e58bd93" name="Id_tarjeta" type="Int32" label="Id_tarjeta : Int32" kind="Persistent" identity="true" fieldName="_id_Tarjeta" />
-      <Property Id="803733d0-7162-4303-a142-72143fa235eb" name="Fecha" type="DateTime" label="Fecha : DateTime" nullable="true" kind="Persistent" fieldName="_fecha" />
-      <Property Id="1d50d14d-5efc-43a4-bf88-a8071119893f" name="Hora" type="DateTime" label="Hora : DateTime" nullable="true" kind="Persistent" fieldName="_hora" />
+      <Property Id="803733d0-7162-4303-a142-72143fa235eb" name="Fecha" type="DateTime" label="Fecha : DateTime" kind="Persistent" fieldName="_fecha" />
+      <Property Id="1d50d14d-5efc-43a4-bf88-a8071119893f" name="Hora" type="DateTime" label="Hora : DateTime" kind="Persistent" fieldName="_hora" />
       <AssociationTargets>
         <Association Id="cc43d2b1-cd03-4eed-804c-179be82edcc2" SourceMultiplicity="One" name="RecargaHasEstacion">
           <DomainClassMoniker name="/EntitiesModel/Estacion" />
@@ -640,7 +650,7 @@
       <Property Id="320b2d8b-a5b2-4df4-90cd-fb078d2ad601" name="Id_bus" type="Int32" label="Id_bus : Int32" kind="Persistent" identity="true" fieldName="_id_Bus" />
       <Property Id="1a77fe51-e637-47ee-be19-d6341c66a8f8" name="Id_empleado" type="Int32" label="Id_empleado : Int32" kind="Persistent" identity="true" fieldName="_id_Empleado" />
       <Property Id="fa6c23ae-b302-4aca-b019-f212d6b79716" name="Id_ruta" type="Int32" label="Id_ruta : Int32" kind="Persistent" identity="true" fieldName="_id_Ruta" />
-      <Property Id="aaddb6cb-e1fb-42b7-bc51-17a87467f9dc" name="Fecha" type="DateTime" label="Fecha : DateTime" nullable="true" kind="Persistent" fieldName="_fecha" />
+      <Property Id="aaddb6cb-e1fb-42b7-bc51-17a87467f9dc" name="Fecha" type="DateTime" label="Fecha : DateTime" kind="Persistent" fieldName="_fecha" />
       <Property Id="e3105558-9fc4-4781-a29e-ec12e992e297" name="Horario" label="Horario : String" kind="Persistent" fieldName="_horario" />
       <AssociationTargets>
         <Association Id="866d3535-3323-4094-8dd8-1a9216859fd6" SourceMultiplicity="One" name="ProgramacionHasBu">
@@ -756,8 +766,8 @@
     <DomainClass Id="baf188e7-664d-4d8b-ac2f-f85160218f14" name="Consumo" namespace="ORM_STM" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
       <Property Id="46509c02-abe1-4371-81f6-624384f99fef" name="Id_estacion" type="Int32" label="Id_estacion : Int32" kind="Persistent" identity="true" fieldName="_id_Estacion" />
       <Property Id="92fc25dc-728a-405d-a979-c6b48aae8951" name="Id_tarjeta" type="Int32" label="Id_tarjeta : Int32" kind="Persistent" identity="true" fieldName="_id_Tarjeta" />
-      <Property Id="210b1de1-77cb-4775-8144-c69bc731ed81" name="Fecha" type="DateTime" label="Fecha : DateTime" nullable="true" kind="Persistent" fieldName="_fecha" />
-      <Property Id="7e444a08-311e-4323-b48c-db07f5d331f5" name="Hora" type="DateTime" label="Hora : DateTime" nullable="true" kind="Persistent" fieldName="_hora" />
+      <Property Id="210b1de1-77cb-4775-8144-c69bc731ed81" name="Fecha" type="DateTime" label="Fecha : DateTime" kind="Persistent" fieldName="_fecha" />
+      <Property Id="7e444a08-311e-4323-b48c-db07f5d331f5" name="Hora" type="DateTime" label="Hora : DateTime" kind="Persistent" fieldName="_hora" />
       <AssociationTargets>
         <Association Id="8790aab6-f203-43d2-92e7-74563a8a5319" SourceMultiplicity="One" name="ConsumoHasEstacion">
           <DomainClassMoniker name="/EntitiesModel/Estacion" />
