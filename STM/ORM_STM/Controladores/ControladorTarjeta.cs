@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-
 namespace ORM_STM.Controladores
 {
-
     public class ControladorTarjeta
     {
 
@@ -20,7 +18,7 @@ namespace ORM_STM.Controladores
                 tarjeta.Id = codigo;
                 tarjeta.Saldo = saldo;
                 tarjeta.Estado = estado;
-                
+
                 dbContext.Add(tarjeta);
                 dbContext.SaveChanges();
 
@@ -41,7 +39,7 @@ namespace ORM_STM.Controladores
 
                 tarjetaParaEditar.Saldo = saldo;
                 tarjetaParaEditar.Estado = estado;
-                
+
                 dbContext.SaveChanges();
 
             }
@@ -89,12 +87,11 @@ namespace ORM_STM.Controladores
             using (EntitiesModel dbContext = new EntitiesModel())
             {
                 List<Tarjetum> tarjetas = (from Tarjeta in dbContext.Tarjeta
-                                  orderby Tarjeta.Id
-                                  select Tarjeta).ToList();
+                                           orderby Tarjeta.Id
+                                           select Tarjeta).ToList();
             }
 
         }
-
 
 
     }
