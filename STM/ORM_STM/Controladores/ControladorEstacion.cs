@@ -84,6 +84,36 @@ namespace ORM_STM.Controladores
 
         }
 
+        public Boolean ConsultaEstacionPorId(int id)
+        {
+
+            Boolean existe = false;
+
+            
+            using (EntitiesModel dbContext = new EntitiesModel())
+            {
+                IEnumerable<Estacion> categories = dbContext.Estacions.Where(
+                    e => e.Id == id);
+
+                if (categories.Equals(null)){
+                
+                    existe = false;
+                }
+                else {
+                
+                    existe = true;
+                
+                }
+            }
+
+
+
+            return existe;
+
+        }
+
+
+
         public void ConsultaOrdenada() //es un ejemplo...podemos ponerle un parametro de entrada
         {
 

@@ -71,6 +71,7 @@
             this.tbID.Name = "tbID";
             this.tbID.Size = new System.Drawing.Size(182, 20);
             this.tbID.TabIndex = 3;
+            this.tbID.TextChanged += new System.EventHandler(this.tbID_TextChanged);
             // 
             // tbNombre
             // 
@@ -103,6 +104,7 @@
             this.btRegistrar.TabIndex = 6;
             this.btRegistrar.Text = "Registrar";
             this.btRegistrar.UseVisualStyleBackColor = true;
+            this.btRegistrar.Click += new System.EventHandler(this.btRegistrar_Click);
             // 
             // RegistroEstacion
             // 
