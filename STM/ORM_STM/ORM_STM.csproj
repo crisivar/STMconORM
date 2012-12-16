@@ -34,8 +34,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -50,7 +48,6 @@
     <Compile Include="Consumo.generated.cs">
       <DependentUpon>EntitiesModel.rlinq</DependentUpon>
     </Compile>
-    <Compile Include="Controladores\ControladorConsumo.cs" />
     <Compile Include="Controladores\ControladorBus.cs" />
     <Compile Include="Controladores\ControladorEstacion.cs" />
     <Compile Include="Controladores\ControladorRuta.cs" />
