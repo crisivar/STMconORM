@@ -31,7 +31,7 @@ namespace ORM_STM.Controladores
 
         public void EditarProgramacion(Bu bus, Ruta ruta, Empleado empleado, DateTime fecha, String horario)
         {
-
+                
             using (EntitiesModel dbContext = new EntitiesModel())
             {
 
