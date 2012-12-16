@@ -10,7 +10,7 @@ namespace ORM_STM.Controladores
     public class ControladorBus
     {
 
-        public void AñadirBus(int Id, DateTime Fecha_adq, String modelo, String placa, String tipo, String color, String fabricante, String capacidad, String tipo_combust, Boolean estado)
+        public void AñadirBus(int Id, DateTime Fecha_adq, String modelo, String placa, String tipo, String color, String fabricante, String capacidad, String tipo_combust)
         {
 
             using (EntitiesModel dbContext = new EntitiesModel())
@@ -26,7 +26,7 @@ namespace ORM_STM.Controladores
                 bus.Fabricante = fabricante;
                 bus.Capacidad = capacidad;
                 bus.Tipo_combust = tipo_combust;
-                bus.Estado = estado;
+                bus.Estado = true;
 
                 dbContext.Add(bus);
                 dbContext.SaveChanges();
@@ -108,8 +108,6 @@ namespace ORM_STM.Controladores
             }
         
         }
-
-
 
     }
 }
