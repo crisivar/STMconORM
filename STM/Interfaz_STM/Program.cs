@@ -18,11 +18,11 @@ namespace Interfaz_STM
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
 
-            ControladorTarjeta contrB = new ControladorTarjeta();
+           // ControladorTarjeta contrB = new ControladorTarjeta();
 
            // contrB.AñadirBus(1111, new DateTime(2010, 1, 18), "asdsd", "asdasd", "asdasd", "asdasd", "adsgfdfg", "fghdgh", "dfhdgh", true);
 
-            ControladorTarjeta contrEditar = new ControladorTarjeta();
+            //ControladorTarjeta contrEditar = new ControladorTarjeta();
 
             //aca hay un problema que detecta llave duplicada en la base de datos :S
             //contrEditar.EditarBus(new DateTime(2010, 1, 18), "ggggg", "gggggg", "gggggg", "asdasd", "adsgfdfg", "fghdgh", "dfhdgh", true);
