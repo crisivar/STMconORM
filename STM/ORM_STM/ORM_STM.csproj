@@ -57,6 +57,7 @@
     <Compile Include="Controladores\ControladorBus.cs" />
     <Compile Include="Controladores\ControladorEstacion.cs" />
     <Compile Include="Controladores\ControladorRecarga.cs" />
+    <Compile Include="Controladores\ControladorReclamos.cs" />
     <Compile Include="Controladores\ControladorRuta.cs" />
     <Compile Include="Controladores\ControladorEmpleado.cs" />
     <Compile Include="Controladores\ControladorTarjetaPersonalizada.cs" />

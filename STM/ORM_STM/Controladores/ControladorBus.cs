@@ -7,7 +7,7 @@ using System.Text;
 namespace ORM_STM.Controladores
 {
     
-    public class ControladorTarjeta
+    public class ControladorBus
     {
 
         public void AñadirBus(int Id, DateTime Fecha_adq, String modelo, String placa, String tipo, String color, String fabricante, String capacidad, String tipo_combust, Boolean estado)
