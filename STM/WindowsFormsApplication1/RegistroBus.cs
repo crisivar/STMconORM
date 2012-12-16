@@ -25,5 +25,18 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void btRegistrar_Click(object sender, EventArgs e)
+        {
+            String iden = tbID.Text;
+            String fecha = fechaAd.Text;
+            String model = tbModelo.Text;
+            String plac = placa.Text;
+            String tip = tipo.SelectedText;
+            String col = color.Text;
+            String fab = fabri.Text;
+            String capa = capacidad.Text;
+            String com = combustible.SelectedText;
+        }
     }
 }

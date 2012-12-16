@@ -34,21 +34,21 @@
             this.lbPlaca = new System.Windows.Forms.Label();
             this.btRegistrar = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.fechaAd = new System.Windows.Forms.DateTimePicker();
             this.lbID = new System.Windows.Forms.Label();
             this.tbID = new System.Windows.Forms.TextBox();
             this.tbModelo = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.placa = new System.Windows.Forms.TextBox();
             this.lbTBus = new System.Windows.Forms.Label();
             this.lbColor = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.color = new System.Windows.Forms.TextBox();
             this.Fabricante = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tipo = new System.Windows.Forms.ComboBox();
+            this.fabri = new System.Windows.Forms.TextBox();
             this.lbCapacidad = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.capacidad = new System.Windows.Forms.ComboBox();
             this.lbTCombustible = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.combustible = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -94,6 +94,7 @@
             this.btRegistrar.TabIndex = 4;
             this.btRegistrar.Text = "Registrar";
             this.btRegistrar.UseVisualStyleBackColor = true;
+            this.btRegistrar.Click += new System.EventHandler(this.btRegistrar_Click);
             // 
             // btCancelar
             // 
@@ -104,12 +105,12 @@
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // fechaAd
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(119, 74);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 6;
+            this.fechaAd.Location = new System.Drawing.Point(119, 74);
+            this.fechaAd.Name = "fechaAd";
+            this.fechaAd.Size = new System.Drawing.Size(200, 20);
+            this.fechaAd.TabIndex = 6;
             // 
             // lbID
             // 
@@ -134,12 +135,12 @@
             this.tbModelo.Size = new System.Drawing.Size(199, 20);
             this.tbModelo.TabIndex = 9;
             // 
-            // textBox1
+            // placa
             // 
-            this.textBox1.Location = new System.Drawing.Point(119, 155);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 20);
-            this.textBox1.TabIndex = 10;
+            this.placa.Location = new System.Drawing.Point(119, 155);
+            this.placa.Name = "placa";
+            this.placa.Size = new System.Drawing.Size(199, 20);
+            this.placa.TabIndex = 10;
             // 
             // lbTBus
             // 
@@ -160,12 +161,12 @@
             this.lbColor.TabIndex = 13;
             this.lbColor.Text = "Color";
             // 
-            // textBox3
+            // color
             // 
-            this.textBox3.Location = new System.Drawing.Point(119, 228);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(199, 20);
-            this.textBox3.TabIndex = 14;
+            this.color.Location = new System.Drawing.Point(119, 228);
+            this.color.Name = "color";
+            this.color.Size = new System.Drawing.Size(199, 20);
+            this.color.TabIndex = 14;
             // 
             // Fabricante
             // 
@@ -176,24 +177,24 @@
             this.Fabricante.TabIndex = 15;
             this.Fabricante.Text = "Fabricante";
             // 
-            // comboBox1
+            // tipo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.tipo.FormattingEnabled = true;
+            this.tipo.Items.AddRange(new object[] {
             "Expreso",
             "Troncal",
             "Pretroncal"});
-            this.comboBox1.Location = new System.Drawing.Point(119, 190);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(199, 21);
-            this.comboBox1.TabIndex = 16;
+            this.tipo.Location = new System.Drawing.Point(119, 190);
+            this.tipo.Name = "tipo";
+            this.tipo.Size = new System.Drawing.Size(199, 21);
+            this.tipo.TabIndex = 16;
             // 
-            // textBox2
+            // fabri
             // 
-            this.textBox2.Location = new System.Drawing.Point(119, 263);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(199, 20);
-            this.textBox2.TabIndex = 17;
+            this.fabri.Location = new System.Drawing.Point(119, 263);
+            this.fabri.Name = "fabri";
+            this.fabri.Size = new System.Drawing.Size(199, 20);
+            this.fabri.TabIndex = 17;
             // 
             // lbCapacidad
             // 
@@ -204,17 +205,17 @@
             this.lbCapacidad.TabIndex = 18;
             this.lbCapacidad.Text = "Capacidad";
             // 
-            // comboBox2
+            // capacidad
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.capacidad.FormattingEnabled = true;
+            this.capacidad.Items.AddRange(new object[] {
             "100 Pasajeros",
             "150 Pasajeros",
             "180 Pasajeros"});
-            this.comboBox2.Location = new System.Drawing.Point(119, 304);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(199, 21);
-            this.comboBox2.TabIndex = 19;
+            this.capacidad.Location = new System.Drawing.Point(119, 304);
+            this.capacidad.Name = "capacidad";
+            this.capacidad.Size = new System.Drawing.Size(199, 21);
+            this.capacidad.TabIndex = 19;
             // 
             // lbTCombustible
             // 
@@ -225,39 +226,39 @@
             this.lbTCombustible.TabIndex = 20;
             this.lbTCombustible.Text = "Tipo Combustible";
             // 
-            // comboBox3
+            // combustible
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.combustible.FormattingEnabled = true;
+            this.combustible.Items.AddRange(new object[] {
             "Gasolina",
             "Gas",
             "Biodiesel",
             "Híbrido"});
-            this.comboBox3.Location = new System.Drawing.Point(119, 343);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(199, 21);
-            this.comboBox3.TabIndex = 21;
+            this.combustible.Location = new System.Drawing.Point(119, 343);
+            this.combustible.Name = "combustible";
+            this.combustible.Size = new System.Drawing.Size(199, 21);
+            this.combustible.TabIndex = 21;
             // 
             // registrarBus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(333, 450);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.combustible);
             this.Controls.Add(this.lbTCombustible);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.capacidad);
             this.Controls.Add(this.lbCapacidad);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.fabri);
+            this.Controls.Add(this.tipo);
             this.Controls.Add(this.Fabricante);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.color);
             this.Controls.Add(this.lbColor);
             this.Controls.Add(this.lbTBus);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.placa);
             this.Controls.Add(this.tbModelo);
             this.Controls.Add(this.tbID);
             this.Controls.Add(this.lbID);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.fechaAd);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btRegistrar);
             this.Controls.Add(this.lbPlaca);
@@ -280,20 +281,20 @@
         private System.Windows.Forms.Label lbPlaca;
         private System.Windows.Forms.Button btRegistrar;
         private System.Windows.Forms.Button btCancelar;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker fechaAd;
         private System.Windows.Forms.Label lbID;
         private System.Windows.Forms.TextBox tbID;
         private System.Windows.Forms.TextBox tbModelo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox placa;
         private System.Windows.Forms.Label lbTBus;
         private System.Windows.Forms.Label lbColor;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox color;
         private System.Windows.Forms.Label Fabricante;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox tipo;
+        private System.Windows.Forms.TextBox fabri;
         private System.Windows.Forms.Label lbCapacidad;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox capacidad;
         private System.Windows.Forms.Label lbTCombustible;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox combustible;
     }
 }
