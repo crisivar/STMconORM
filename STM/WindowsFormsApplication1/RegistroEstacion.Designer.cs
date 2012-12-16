@@ -71,7 +71,6 @@
             this.tbID.Name = "tbID";
             this.tbID.Size = new System.Drawing.Size(182, 20);
             this.tbID.TabIndex = 3;
-            this.tbID.TextChanged += new System.EventHandler(this.tbID_TextChanged);
             // 
             // tbNombre
             // 
@@ -95,6 +94,7 @@
             this.btCancelar.TabIndex = 7;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // btRegistrar
             // 

@@ -84,7 +84,7 @@ namespace ORM_STM.Controladores
 
         }
 
-        public Boolean ConsultaEstacionPorId(int id)
+        public Boolean ComprobarEstacionPorId(int id)
         {
 
             Boolean existe = false;
