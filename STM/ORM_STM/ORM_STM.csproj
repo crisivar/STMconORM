@@ -48,6 +48,7 @@
     <Compile Include="Consumo.generated.cs">
       <DependentUpon>EntitiesModel.rlinq</DependentUpon>
     </Compile>
+    <Compile Include="Controladores\ControladorProgramacion.cs" />
     <Compile Include="Controladores\ControladorBus.cs" />
     <Compile Include="Controladores\ControladorEstacion.cs" />
     <Compile Include="Controladores\ControladorRuta.cs" />
