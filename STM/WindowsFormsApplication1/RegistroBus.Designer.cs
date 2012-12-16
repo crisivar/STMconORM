@@ -34,7 +34,6 @@
             this.lbPlaca = new System.Windows.Forms.Label();
             this.btRegistrar = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
-            this.fechaAd = new System.Windows.Forms.DateTimePicker();
             this.lbID = new System.Windows.Forms.Label();
             this.tbID = new System.Windows.Forms.TextBox();
             this.tbModelo = new System.Windows.Forms.TextBox();
@@ -49,6 +48,7 @@
             this.capacidad = new System.Windows.Forms.ComboBox();
             this.lbTCombustible = new System.Windows.Forms.Label();
             this.combustible = new System.Windows.Forms.ComboBox();
+            this.fecha = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -56,9 +56,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(19, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 13);
+            this.label1.Size = new System.Drawing.Size(171, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Fecha Adquisicion\r\n";
+            this.label1.Text = "Fecha Adquisicion (dd/MM/AAAA)\r\n";
             // 
             // label2
             // 
@@ -105,13 +105,6 @@
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
-            // 
-            // fechaAd
-            // 
-            this.fechaAd.Location = new System.Drawing.Point(119, 74);
-            this.fechaAd.Name = "fechaAd";
-            this.fechaAd.Size = new System.Drawing.Size(200, 20);
-            this.fechaAd.TabIndex = 6;
             // 
             // lbID
             // 
@@ -240,11 +233,19 @@
             this.combustible.Size = new System.Drawing.Size(199, 21);
             this.combustible.TabIndex = 21;
             // 
+            // fecha
+            // 
+            this.fecha.Location = new System.Drawing.Point(188, 78);
+            this.fecha.Name = "fecha";
+            this.fecha.Size = new System.Drawing.Size(130, 20);
+            this.fecha.TabIndex = 22;
+            // 
             // registrarBus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(333, 450);
+            this.Controls.Add(this.fecha);
             this.Controls.Add(this.combustible);
             this.Controls.Add(this.lbTCombustible);
             this.Controls.Add(this.capacidad);
@@ -259,7 +260,6 @@
             this.Controls.Add(this.tbModelo);
             this.Controls.Add(this.tbID);
             this.Controls.Add(this.lbID);
-            this.Controls.Add(this.fechaAd);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btRegistrar);
             this.Controls.Add(this.lbPlaca);
@@ -282,7 +282,6 @@
         private System.Windows.Forms.Label lbPlaca;
         private System.Windows.Forms.Button btRegistrar;
         private System.Windows.Forms.Button btCancelar;
-        private System.Windows.Forms.DateTimePicker fechaAd;
         private System.Windows.Forms.Label lbID;
         private System.Windows.Forms.TextBox tbID;
         private System.Windows.Forms.TextBox tbModelo;
@@ -297,5 +296,6 @@
         private System.Windows.Forms.ComboBox capacidad;
         private System.Windows.Forms.Label lbTCombustible;
         private System.Windows.Forms.ComboBox combustible;
+        private System.Windows.Forms.TextBox fecha;
     }
 }

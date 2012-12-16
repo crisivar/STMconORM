@@ -8,7 +8,7 @@ namespace ORM_STM.Controladores
     public class ControladorEmpleado
     {
 
-        public void AñadirEmpleado(int Id, String tipo_id, String nombre, String email, String direccion, String telefono, String cargo, String estado_civil, int salario, Boolean estado)
+        public void AñadirEmpleado(int Id, String tipo_id, String nombre, String email, String direccion, String telefono, String cargo, String estado_civil, int salario)
         {
 
             using (EntitiesModel dbContext = new EntitiesModel())
@@ -24,7 +24,7 @@ namespace ORM_STM.Controladores
                 empleado.Cargo= cargo;
                 //empleado.Estado_Civil = estado_civil;
                 empleado.Salario = salario;
-                empleado.Estado = estado;
+                empleado.Estado = true;
 
                 dbContext.Add(empleado);
                 dbContext.SaveChanges();

@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
     public partial class registrarBus : Form
     {
         ControladorBus cBus = new ControladorBus();
-
+        
         public registrarBus()
         {
             InitializeComponent();
@@ -33,19 +33,21 @@ namespace WindowsFormsApplication1
         {
             String iden = tbID.Text;
             int ident = int.Parse(iden); 
-            String fecha = fechaAd.Text;
+            String fech = fecha.Text;
             DateTime fechita = new DateTime();
-            fechita=DateTime.ParseExact(iden,"yyyy-MM-dd",null);
+            fechita=DateTime.ParseExact(fech,"d",null);
             String model = tbModelo.Text;
             String plac = placa.Text;
-            String tip = tipo.SelectedText;
+            String tip = tipo.Text;
             String col = color.Text;
             String fab = fabri.Text;
             String capa = capacidad.Text;
-            String com = combustible.SelectedText;
+            String com = combustible.Text;
 
             cBus.AñadirBus(ident,fechita,model,plac,tip,col,fab,capa,com);
 
+            MessageBox.Show("el registro fue exitoso",null);
+            this.Close();
         }
 
         private void btCancelar_Click(object sender, EventArgs e)
