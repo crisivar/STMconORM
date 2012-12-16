@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ORM_STM.Controladores
 {
-    class ControladorRecarga
+    public class ControladorRecarga
     {
 
         public void AñadirRecarga(Estacion estacion, Tarjetum tarjeta, DateTime fecha, DateTime hora)
