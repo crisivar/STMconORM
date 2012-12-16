@@ -23,7 +23,7 @@ using ORM_STM;
 
 namespace ORM_STM	
 {
-	public partial class Rutum
+	public partial class Ruta
 	{
 		private int _id;
 		public virtual int Id 

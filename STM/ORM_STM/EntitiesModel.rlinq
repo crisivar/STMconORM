@@ -98,7 +98,7 @@
           </orm:reference>
         </orm:field>
       </orm:class>
-      <orm:class name="Rutum" uniqueId="4a6c5fb3-e91c-48a7-a7d0-2dbad973183b">
+      <orm:class name="Ruta" uniqueId="4a6c5fb3-e91c-48a7-a7d0-2dbad973183b">
         <orm:table name="ruta" />
         <orm:identity>
           <orm:single-field field-name="_id" />
@@ -191,9 +191,9 @@
             <orm:constraint name="programacion_id_empleado_fkey" destination-table="empleado" />
           </orm:reference>
         </orm:field>
-        <orm:field name="_rutum" property="Rutum" behavior="readwrite" uniqueId="6955e631-2e14-4d2b-9062-e3a3fe00dbea" type="ORM_STM.Rutum">
+        <orm:field name="_rutum" property="Rutum" behavior="readwrite" uniqueId="6955e631-2e14-4d2b-9062-e3a3fe00dbea" type="ORM_STM.Ruta">
           <orm:reference uniqueId="3a609b33-8eb8-45ea-b668-e9e585750f69">
-            <orm:sharedfield name="_id_Ruta" target-class="ORM_STM.Rutum" target-field="_id" />
+            <orm:sharedfield name="_id_Ruta" target-class="ORM_STM.Ruta" target-field="_id" />
             <orm:constraint name="programacion_id_ruta_fkey" destination-table="ruta" />
           </orm:reference>
         </orm:field>
@@ -268,14 +268,14 @@
         <orm:field name="_id_Estacion" property="Id_estacion" behavior="readwrite" uniqueId="77aae982-7e7d-4ff8-bf13-df588a7295ee" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
           <orm:column name="id_estacion" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
         </orm:field>
-        <orm:field name="_programacions" property="Programacions" behavior="readwrite" uniqueId="9f646223-ef59-4d36-bcce-0d0d76dd833b" type="ORM_STM.Programacion">
-          <orm:collection element-class="ORM_STM.Programacion" inverse-field="_empleado" managed="true" order-by="" uniqueId="623066a9-2a91-402a-a775-4a4974773987" />
-        </orm:field>
         <orm:field name="_estacion" property="Estacion" behavior="readwrite" uniqueId="d7226108-16ab-48c1-adae-2790891ceddf" type="ORM_STM.Estacion">
           <orm:reference uniqueId="70469da6-8138-4b02-b966-bdd8365b67cd">
             <orm:sharedfield name="_id_Estacion" target-class="ORM_STM.Estacion" target-field="_id" />
             <orm:constraint name="empleado_id_estacion_fkey" destination-table="estacion" />
           </orm:reference>
+        </orm:field>
+        <orm:field name="_programacions" property="Programacions" behavior="readwrite" uniqueId="9f646223-ef59-4d36-bcce-0d0d76dd833b" type="ORM_STM.Programacion">
+          <orm:collection element-class="ORM_STM.Programacion" inverse-field="_empleado" managed="true" order-by="" uniqueId="623066a9-2a91-402a-a775-4a4974773987" />
         </orm:field>
       </orm:class>
       <orm:class name="Consumo" uniqueId="baf188e7-664d-4d8b-ac2f-f85160218f14">
@@ -583,7 +583,7 @@
         </classHasNavigationalProperties>
       </navigationalProperties>
     </DomainClass>
-    <DomainClass Id="4a6c5fb3-e91c-48a7-a7d0-2dbad973183b" name="Rutum" namespace="ORM_STM" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+    <DomainClass Id="4a6c5fb3-e91c-48a7-a7d0-2dbad973183b" name="Ruta" namespace="ORM_STM" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
       <Property Id="4d8f7913-4af9-4ccf-b5e5-f3a26374895a" name="Id" type="Int32" label="Id : Int32" kind="Persistent" identity="true" fieldName="_id" />
       <Property Id="5e7ca66b-5857-4eb4-8536-b8f94310d8ce" name="Descripcion" label="Descripcion : String" kind="Persistent" fieldName="_descripcion" />
       <Property Id="0f8abf15-9fa6-471b-9ba1-8e91f75ab050" name="Estado" type="Boolean" label="Estado : Boolean" nullable="true" kind="Persistent" fieldName="_estado" />
@@ -670,10 +670,10 @@
           </sourceNavigationalProperty>
         </Association>
         <Association Id="3a609b33-8eb8-45ea-b668-e9e585750f69" SourceMultiplicity="One" name="ProgramacionHasRutum">
-          <DomainClassMoniker name="/EntitiesModel/Rutum" />
+          <DomainClassMoniker name="/EntitiesModel/Ruta" />
           <targetNavigationalProperty>
             <associationDefinesTargetProperty Id="2ffa04e9-47e3-4246-a766-89630ffb80e9">
-              <NavigationalPropertyMoniker name="/EntitiesModel/Rutum/Programacions" />
+              <NavigationalPropertyMoniker name="/EntitiesModel/Ruta/Programacions" />
             </associationDefinesTargetProperty>
           </targetNavigationalProperty>
           <sourceNavigationalProperty>
@@ -819,7 +819,7 @@
         <entitySetProperty name="Tarjeta_personalizadas" namespace="ORM_STM" type="Tarjeta_personalizada" label="Tarjeta_personalizadas : IQueryable&lt;ORM_STM.Tarjeta_personalizada&gt;" />
         <entitySetProperty name="Tarjeta" namespace="ORM_STM" type="Tarjetum" label="Tarjeta : IQueryable&lt;ORM_STM.Tarjetum&gt;" />
         <entitySetProperty name="Solicitud_reclamos" namespace="ORM_STM" type="Solicitud_reclamo" label="Solicitud_reclamos : IQueryable&lt;ORM_STM.Solicitud_reclamo&gt;" />
-        <entitySetProperty name="Ruta" namespace="ORM_STM" type="Rutum" label="Ruta : IQueryable&lt;ORM_STM.Rutum&gt;" />
+        <entitySetProperty name="Rutas" namespace="ORM_STM" type="Ruta" label="Rutas : IQueryable&lt;ORM_STM.Ruta&gt;" />
         <entitySetProperty name="Recargas" namespace="ORM_STM" type="Recarga" label="Recargas : IQueryable&lt;ORM_STM.Recarga&gt;" />
         <entitySetProperty name="Programacions" namespace="ORM_STM" type="Programacion" label="Programacions : IQueryable&lt;ORM_STM.Programacion&gt;" />
         <entitySetProperty name="Estacions" namespace="ORM_STM" type="Estacion" label="Estacions : IQueryable&lt;ORM_STM.Estacion&gt;" />

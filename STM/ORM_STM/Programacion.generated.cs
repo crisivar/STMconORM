@@ -116,8 +116,8 @@ namespace ORM_STM
 		    }
 		}
 		
-		private Rutum _rutum;
-		public virtual Rutum Rutum 
+		private Ruta _rutum;
+		public virtual Ruta Rutum 
 		{ 
 		    get
 		    {

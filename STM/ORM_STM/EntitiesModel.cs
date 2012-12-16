@@ -76,11 +76,11 @@ namespace ORM_STM
 	    	}
 		}
 		
-		public IQueryable<Rutum> Ruta 
+		public IQueryable<Ruta> Rutas 
 		{
 	    	get
 	    	{
-	        	return this.GetAll<Rutum>();
+	        	return this.GetAll<Ruta>();
 	    	}
 		}
 		
@@ -158,7 +158,7 @@ namespace ORM_STM
 			get;
 		}
 
-		IQueryable<Rutum> Ruta 
+		IQueryable<Ruta> Rutas 
 		{ 
 			get;
 		}
