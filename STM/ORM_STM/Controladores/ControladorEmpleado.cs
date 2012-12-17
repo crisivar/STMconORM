@@ -9,7 +9,7 @@ namespace ORM_STM.Controladores
     public class ControladorEmpleado
     {
 
-        public void AñadirEmpleado(int Id, String tipo_id, String nombre, String email, String direccion, String telefono, String cargo, String estado_civil, int salario,int esta)
+        public void AñadirEmpleado(int Id, String tipo_id, String nombre, String email, String direccion, String telefono, String cargo, String estado_civil, int salario,int esta, String clave)
         {
 
             using (EntitiesModel dbContext = new EntitiesModel())
@@ -27,6 +27,7 @@ namespace ORM_STM.Controladores
                 empleado.Salario = salario;
                 empleado.Estado = true;
                 empleado.Id_estacion = esta;
+                empleado.Contrasena = clave;
 
                 dbContext.Add(empleado);
                 dbContext.SaveChanges();
@@ -108,6 +109,36 @@ namespace ORM_STM.Controladores
             {
                 // 2. Initialize the sql query.
                 string SqlQuery = "Select id from empleado where empleado.id=" + id;
+
+                using (OAConnection connection = dbContext.Connection)
+                {
+                    // 3. Create a new instance of the OACommand class.
+                    using (command = connection.CreateCommand())
+                    {
+                        command.CommandText = SqlQuery;
+
+                        // 4. Execute the command and retrieve the scalar values.
+                        using (System.Data.Common.DbDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read()) { exist = true; }
+
+                        }
+
+                    }
+                }
+            }
+            return exist;
+        }
+
+        public Boolean comprobarLoginContrasena(int id, String pass)
+        {
+            OACommand command;
+            Boolean exist = false;
+            // 1. Create a new instance of the OpenAccessContext.
+            using (EntitiesModel dbContext = new EntitiesModel())
+            {
+                // 2. Initialize the sql query.
+                string SqlQuery = "Select id from empleado where empleado.id=" + id +"and empleado.contrasena=" + pass;
 
                 using (OAConnection connection = dbContext.Connection)
                 {

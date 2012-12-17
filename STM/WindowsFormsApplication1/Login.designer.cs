@@ -32,7 +32,7 @@
             this.bCancelar = new System.Windows.Forms.Button();
             this.labelLogin = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tBlogin = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btAccesoPasajeros = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -45,7 +45,7 @@
             this.bEntrar.TabIndex = 0;
             this.bEntrar.Text = "Acceso";
             this.bEntrar.UseVisualStyleBackColor = true;
-            this.bEntrar.Click += new System.EventHandler(this.button1_Click);
+            this.bEntrar.Click += new System.EventHandler(this.bEntrar_Click);
             // 
             // bCancelar
             // 
@@ -55,6 +55,7 @@
             this.bCancelar.TabIndex = 1;
             this.bCancelar.Text = "Cancelar";
             this.bCancelar.UseVisualStyleBackColor = true;
+            this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
             // 
             // labelLogin
             // 
@@ -65,7 +66,6 @@
             this.labelLogin.Size = new System.Drawing.Size(57, 24);
             this.labelLogin.TabIndex = 2;
             this.labelLogin.Text = "Login";
-            this.labelLogin.Click += new System.EventHandler(this.label1_Click);
             // 
             // labelPassword
             // 
@@ -77,18 +77,18 @@
             this.labelPassword.TabIndex = 3;
             this.labelPassword.Text = "Password";
             // 
-            // textBox1
+            // tBlogin
             // 
-            this.textBox1.Location = new System.Drawing.Point(273, 121);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(123, 20);
-            this.textBox1.TabIndex = 4;
+            this.tBlogin.Location = new System.Drawing.Point(247, 121);
+            this.tBlogin.Name = "tBlogin";
+            this.tBlogin.Size = new System.Drawing.Size(149, 20);
+            this.tBlogin.TabIndex = 4;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(273, 170);
+            this.textBox2.Location = new System.Drawing.Point(247, 170);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(123, 20);
+            this.textBox2.Size = new System.Drawing.Size(149, 20);
             this.textBox2.TabIndex = 5;
             // 
             // btAccesoPasajeros
@@ -99,7 +99,6 @@
             this.btAccesoPasajeros.TabIndex = 6;
             this.btAccesoPasajeros.Text = "Acceso a pasajeros";
             this.btAccesoPasajeros.UseVisualStyleBackColor = true;
-            this.btAccesoPasajeros.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Login
             // 
@@ -108,7 +107,7 @@
             this.ClientSize = new System.Drawing.Size(516, 353);
             this.Controls.Add(this.btAccesoPasajeros);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tBlogin);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelLogin);
             this.Controls.Add(this.bCancelar);
@@ -128,7 +127,7 @@
         private System.Windows.Forms.Button bCancelar;
         private System.Windows.Forms.Label labelLogin;
         private System.Windows.Forms.Label labelPassword;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tBlogin;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btAccesoPasajeros;
     }

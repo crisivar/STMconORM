@@ -66,7 +66,11 @@
       </orm:class>
       <orm:class name="Solicitud_reclamo" uniqueId="7a768134-3dc5-4b9f-9961-796b06638d33">
         <orm:table name="solicitud_reclamo" />
-        <orm:identity />
+        <orm:identity>
+          <orm:internal>
+            <orm:column name="id" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+          </orm:internal>
+        </orm:identity>
         <orm:concurrency strategy="changed" />
         <orm:field name="_id_Tarjeta" property="Id_tarjeta" behavior="readwrite" uniqueId="8e4ca5e4-2e83-4824-aed2-cfb5c51d52b9" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
           <orm:column name="id_tarjeta" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
@@ -87,7 +91,7 @@
           <orm:column name="estado" sql-type="varchar" nullable="true" length="100" scale="0" ado-type="UnicodeStringVariableLength" />
         </orm:field>
         <orm:field name="_id" property="Id" behavior="readwrite" uniqueId="83f03b37-1810-4311-bcc8-aa945a89d626" type="System.Int32">
-          <orm:column nullable="false" primary-key="true" length="0" name="id" scale="0" sql-type="int4" ado-type="Int32" />
+          <orm:column name="id" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
         </orm:field>
         <orm:field name="_estacion" property="Estacion" behavior="readwrite" uniqueId="970d406f-8fe0-421f-95e2-8ce3894a983e" type="ORM_STM.Estacion">
           <orm:reference uniqueId="7dc66575-6f6c-4cb6-81c5-89a3ee7ecaf5">
@@ -272,6 +276,9 @@
         <orm:field name="_id_Estacion" property="Id_estacion" behavior="readwrite" uniqueId="77aae982-7e7d-4ff8-bf13-df588a7295ee" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
           <orm:column name="id_estacion" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
         </orm:field>
+        <orm:field name="_contrasena" property="Contrasena" behavior="readwrite" uniqueId="6df491a2-e1c4-4446-b99a-e39e01890f4f" type="System.String">
+          <orm:column nullable="true" length="50" name="contrasena" scale="0" sql-type="varchar" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
         <orm:field name="_estacion" property="Estacion" behavior="readwrite" uniqueId="d7226108-16ab-48c1-adae-2790891ceddf" type="ORM_STM.Estacion">
           <orm:reference uniqueId="70469da6-8138-4b02-b966-bdd8365b67cd">
             <orm:sharedfield name="_id_Estacion" target-class="ORM_STM.Estacion" target-field="_id" />
@@ -383,7 +390,7 @@
         <orm:column name="descripcion" sql-type="varchar" nullable="true" length="100" scale="0" ado-type="UnicodeStringVariableLength" />
         <orm:column name="respuesta" sql-type="varchar" nullable="true" length="100" scale="0" ado-type="UnicodeStringVariableLength" />
         <orm:column name="estado" sql-type="varchar" nullable="true" length="100" scale="0" ado-type="UnicodeStringVariableLength" />
-        <orm:column nullable="false" primary-key="true" length="0" name="id" scale="0" sql-type="int4" ado-type="Int32" />
+        <orm:column name="id" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
         <orm:constraint name="solicitud_reclamo_id_estacion_fkey" destination-table="estacion">
           <orm:column name="id_estacion" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
         </orm:constraint>
@@ -442,6 +449,7 @@
         <orm:column name="salario" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
         <orm:column name="estado" sql-type="bool" nullable="true" length="0" scale="0" ado-type="Bit" />
         <orm:column name="id_estacion" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column nullable="true" length="50" name="contrasena" scale="0" sql-type="varchar" ado-type="UnicodeStringVariableLength" />
         <orm:constraint name="empleado_id_estacion_fkey" destination-table="estacion">
           <orm:column name="id_estacion" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
         </orm:constraint>
@@ -739,6 +747,7 @@
       <Property Id="30a246ab-d54c-4910-9812-091860066a19" name="Salario" type="Int32" label="Salario : Int32" nullable="true" kind="Persistent" fieldName="_salario" />
       <Property Id="312a8fe4-69ab-4520-bd58-b4831d6b5223" name="Telefono" label="Telefono : String" kind="Persistent" fieldName="_telefono" />
       <Property Id="0b4411af-5cd9-4b83-8397-9b5107134ec4" name="Tipo_id" label="Tipo_id : String" kind="Persistent" fieldName="_tipo_Id" />
+      <Property Id="6df491a2-e1c4-4446-b99a-e39e01890f4f" name="Contrasena" label="Contrasena : String" kind="Persistent" fieldName="_contrasena" />
       <AssociationTargets>
         <Association Id="70469da6-8138-4b02-b966-bdd8365b67cd" SourceMultiplicity="ZeroOne" name="EmpleadoHasEstacion">
           <DomainClassMoniker name="/EntitiesModel/Estacion" />

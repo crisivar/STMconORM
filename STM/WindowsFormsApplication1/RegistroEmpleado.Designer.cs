@@ -50,12 +50,14 @@
             this.btRegistrar = new System.Windows.Forms.Button();
             this.Es = new System.Windows.Forms.Label();
             this.estacion = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tBPassw = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbID
             // 
             this.lbID.AutoSize = true;
-            this.lbID.Location = new System.Drawing.Point(16, 43);
+            this.lbID.Location = new System.Drawing.Point(16, 46);
             this.lbID.Name = "lbID";
             this.lbID.Size = new System.Drawing.Size(70, 13);
             this.lbID.TabIndex = 0;
@@ -65,7 +67,7 @@
             // lbTipoID
             // 
             this.lbTipoID.AutoSize = true;
-            this.lbTipoID.Location = new System.Drawing.Point(16, 79);
+            this.lbTipoID.Location = new System.Drawing.Point(16, 82);
             this.lbTipoID.Name = "lbTipoID";
             this.lbTipoID.Size = new System.Drawing.Size(48, 13);
             this.lbTipoID.TabIndex = 1;
@@ -74,7 +76,7 @@
             // lbNombre
             // 
             this.lbNombre.AutoSize = true;
-            this.lbNombre.Location = new System.Drawing.Point(16, 119);
+            this.lbNombre.Location = new System.Drawing.Point(16, 122);
             this.lbNombre.Name = "lbNombre";
             this.lbNombre.Size = new System.Drawing.Size(44, 13);
             this.lbNombre.TabIndex = 2;
@@ -83,7 +85,7 @@
             // lbECivil
             // 
             this.lbECivil.AutoSize = true;
-            this.lbECivil.Location = new System.Drawing.Point(16, 161);
+            this.lbECivil.Location = new System.Drawing.Point(16, 156);
             this.lbECivil.Name = "lbECivil";
             this.lbECivil.Size = new System.Drawing.Size(62, 13);
             this.lbECivil.TabIndex = 3;
@@ -92,7 +94,7 @@
             // lbDireccion
             // 
             this.lbDireccion.AutoSize = true;
-            this.lbDireccion.Location = new System.Drawing.Point(16, 207);
+            this.lbDireccion.Location = new System.Drawing.Point(16, 193);
             this.lbDireccion.Name = "lbDireccion";
             this.lbDireccion.Size = new System.Drawing.Size(52, 13);
             this.lbDireccion.TabIndex = 4;
@@ -101,7 +103,7 @@
             // lbTelefono
             // 
             this.lbTelefono.AutoSize = true;
-            this.lbTelefono.Location = new System.Drawing.Point(16, 249);
+            this.lbTelefono.Location = new System.Drawing.Point(16, 230);
             this.lbTelefono.Name = "lbTelefono";
             this.lbTelefono.Size = new System.Drawing.Size(49, 13);
             this.lbTelefono.TabIndex = 5;
@@ -110,7 +112,7 @@
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Location = new System.Drawing.Point(16, 287);
+            this.lbEmail.Location = new System.Drawing.Point(16, 270);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(32, 13);
             this.lbEmail.TabIndex = 6;
@@ -119,7 +121,7 @@
             // lbCargo
             // 
             this.lbCargo.AutoSize = true;
-            this.lbCargo.Location = new System.Drawing.Point(16, 332);
+            this.lbCargo.Location = new System.Drawing.Point(16, 312);
             this.lbCargo.Name = "lbCargo";
             this.lbCargo.Size = new System.Drawing.Size(35, 13);
             this.lbCargo.TabIndex = 7;
@@ -128,7 +130,7 @@
             // lbSalario
             // 
             this.lbSalario.AutoSize = true;
-            this.lbSalario.Location = new System.Drawing.Point(16, 372);
+            this.lbSalario.Location = new System.Drawing.Point(16, 352);
             this.lbSalario.Name = "lbSalario";
             this.lbSalario.Size = new System.Drawing.Size(39, 13);
             this.lbSalario.TabIndex = 8;
@@ -175,28 +177,28 @@
             // 
             // tbDireccion
             // 
-            this.tbDireccion.Location = new System.Drawing.Point(123, 199);
+            this.tbDireccion.Location = new System.Drawing.Point(123, 190);
             this.tbDireccion.Name = "tbDireccion";
             this.tbDireccion.Size = new System.Drawing.Size(195, 20);
             this.tbDireccion.TabIndex = 13;
             // 
             // tbTelefono
             // 
-            this.tbTelefono.Location = new System.Drawing.Point(123, 241);
+            this.tbTelefono.Location = new System.Drawing.Point(123, 227);
             this.tbTelefono.Name = "tbTelefono";
             this.tbTelefono.Size = new System.Drawing.Size(195, 20);
             this.tbTelefono.TabIndex = 14;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(123, 280);
+            this.tbEmail.Location = new System.Drawing.Point(123, 267);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(195, 20);
             this.tbEmail.TabIndex = 15;
             // 
             // tbSalario
             // 
-            this.tbSalario.Location = new System.Drawing.Point(123, 365);
+            this.tbSalario.Location = new System.Drawing.Point(123, 349);
             this.tbSalario.Name = "tbSalario";
             this.tbSalario.Size = new System.Drawing.Size(195, 20);
             this.tbSalario.TabIndex = 16;
@@ -209,14 +211,14 @@
             "Conductor",
             "Director Estacion",
             "Director Operativo"});
-            this.cbCargo.Location = new System.Drawing.Point(123, 324);
+            this.cbCargo.Location = new System.Drawing.Point(123, 309);
             this.cbCargo.Name = "cbCargo";
             this.cbCargo.Size = new System.Drawing.Size(195, 21);
             this.cbCargo.TabIndex = 17;
             // 
             // btCancelar
             // 
-            this.btCancelar.Location = new System.Drawing.Point(183, 457);
+            this.btCancelar.Location = new System.Drawing.Point(185, 487);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
             this.btCancelar.TabIndex = 19;
@@ -226,7 +228,7 @@
             // 
             // btRegistrar
             // 
-            this.btRegistrar.Location = new System.Drawing.Point(60, 457);
+            this.btRegistrar.Location = new System.Drawing.Point(59, 487);
             this.btRegistrar.Name = "btRegistrar";
             this.btRegistrar.Size = new System.Drawing.Size(75, 23);
             this.btRegistrar.TabIndex = 18;
@@ -237,7 +239,7 @@
             // Es
             // 
             this.Es.AutoSize = true;
-            this.Es.Location = new System.Drawing.Point(16, 413);
+            this.Es.Location = new System.Drawing.Point(16, 392);
             this.Es.Name = "Es";
             this.Es.Size = new System.Drawing.Size(48, 13);
             this.Es.TabIndex = 20;
@@ -245,16 +247,35 @@
             // 
             // estacion
             // 
-            this.estacion.Location = new System.Drawing.Point(123, 406);
+            this.estacion.Location = new System.Drawing.Point(123, 389);
             this.estacion.Name = "estacion";
             this.estacion.Size = new System.Drawing.Size(195, 20);
             this.estacion.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 430);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Password";
+            // 
+            // tBPassw
+            // 
+            this.tBPassw.Location = new System.Drawing.Point(123, 427);
+            this.tBPassw.Name = "tBPassw";
+            this.tBPassw.Size = new System.Drawing.Size(195, 20);
+            this.tBPassw.TabIndex = 23;
+            this.tBPassw.UseSystemPasswordChar = true;
             // 
             // RegistroEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(340, 492);
+            this.ClientSize = new System.Drawing.Size(340, 522);
+            this.Controls.Add(this.tBPassw);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.estacion);
             this.Controls.Add(this.Es);
             this.Controls.Add(this.btCancelar);
@@ -309,5 +330,7 @@
         private System.Windows.Forms.Button btRegistrar;
         private System.Windows.Forms.Label Es;
         private System.Windows.Forms.TextBox estacion;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tBPassw;
     }
 }

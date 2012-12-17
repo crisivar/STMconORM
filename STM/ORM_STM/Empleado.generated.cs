@@ -155,6 +155,19 @@ namespace ORM_STM
 		    }
 		}
 		
+		private string _contrasena;
+		public virtual string Contrasena 
+		{ 
+		    get
+		    {
+		        return this._contrasena;
+		    }
+		    set
+		    {
+		        this._contrasena = value;
+		    }
+		}
+		
 		private Estacion _estacion;
 		public virtual Estacion Estacion 
 		{ 

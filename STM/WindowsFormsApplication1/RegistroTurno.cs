@@ -36,7 +36,7 @@ namespace WindowsFormsApplication1
             DateTime fechita = DateTime.ParseExact(tbHComienzo.Text,"d",null);
             String hor = tbHFin.Text;
 
-            Boolean existe1 = emple.comprobarEmpleado(emp);
+            Boolean existe1 = emple.comprobarLoginContrasena(emp);
             Boolean existe2 = buss.comprobarBus(bus);
             Boolean existe3 = ruta.comprobarRuta(rut);
 

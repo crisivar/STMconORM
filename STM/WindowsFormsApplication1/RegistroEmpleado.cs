@@ -44,6 +44,7 @@ namespace WindowsFormsApplication1
             String tel= tbTelefono.Text;
             String mail=tbEmail.Text;
             String car= cbCargo.Text;
+            String pass = tBPassw.Text;
             int sal = int.Parse(tbSalario.Text);
             int est = int.Parse(estacion.Text);
             Boolean existe = cEsta.comprobarEstacion(est);
@@ -54,10 +55,11 @@ namespace WindowsFormsApplication1
                 estacion.Clear();
             }
             else {
-                cEmp.AñadirEmpleado(id, tipId, nom, mail, dir, tel, car, civil, sal, est);
+                cEmp.AñadirEmpleado(id, tipId, nom, mail, dir, tel, car, civil, sal, est, pass);
                 MessageBox.Show("el registro fue exitoso", null);
                 this.Close();
             }          
         }
+
     }
 }
