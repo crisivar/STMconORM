@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuAuxiliar));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tarjetasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarTarjetaPersonalizadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -120,6 +121,7 @@
             this.informacionCuentaToolStripMenuItem.Name = "informacionCuentaToolStripMenuItem";
             this.informacionCuentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.informacionCuentaToolStripMenuItem.Text = "Informacion Cuenta";
+            this.informacionCuentaToolStripMenuItem.Click += new System.EventHandler(this.informacionCuentaToolStripMenuItem_Click);
             // 
             // salirCuentaToolStripMenuItem
             // 
@@ -131,8 +133,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.Logo_copia;
             this.ClientSize = new System.Drawing.Size(503, 424);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MenuAuxiliar";
             this.Text = "Auxiliar";

@@ -34,6 +34,11 @@ namespace WindowsFormsApplication1
             RegSol.Show();
         }
 
+        private void informacionCuentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
 
     }
 }

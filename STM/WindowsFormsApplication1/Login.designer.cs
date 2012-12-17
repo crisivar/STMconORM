@@ -1,16 +1,16 @@
-﻿namespace Interfaz_STM
+﻿namespace WindowsFormsApplication1
 {
     partial class Login
     {
         /// <summary>
-        /// Variable del diseñador requerida.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpiar los recursos que se estén utilizando.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben eliminar; false en caso contrario, false.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,102 +20,90 @@
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de Windows Forms
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido del método con el editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.bEntrar = new System.Windows.Forms.Button();
-            this.bCancelar = new System.Windows.Forms.Button();
-            this.labelLogin = new System.Windows.Forms.Label();
-            this.labelPassword = new System.Windows.Forms.Label();
-            this.tBlogin = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.btAccesoPasajeros = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            this.lbLogin = new System.Windows.Forms.Label();
+            this.lbContrasena = new System.Windows.Forms.Label();
+            this.tbLogin = new System.Windows.Forms.TextBox();
+            this.tbContrasena = new System.Windows.Forms.TextBox();
+            this.btIngresar = new System.Windows.Forms.Button();
+            this.btSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // bEntrar
+            // lbLogin
             // 
-            this.bEntrar.Location = new System.Drawing.Point(139, 256);
-            this.bEntrar.Name = "bEntrar";
-            this.bEntrar.Size = new System.Drawing.Size(99, 23);
-            this.bEntrar.TabIndex = 0;
-            this.bEntrar.Text = "Acceso";
-            this.bEntrar.UseVisualStyleBackColor = true;
-            this.bEntrar.Click += new System.EventHandler(this.bEntrar_Click);
+            this.lbLogin.AutoSize = true;
+            this.lbLogin.Location = new System.Drawing.Point(34, 42);
+            this.lbLogin.Name = "lbLogin";
+            this.lbLogin.Size = new System.Drawing.Size(33, 13);
+            this.lbLogin.TabIndex = 0;
+            this.lbLogin.Text = "Login";
             // 
-            // bCancelar
+            // lbContrasena
             // 
-            this.bCancelar.Location = new System.Drawing.Point(297, 256);
-            this.bCancelar.Name = "bCancelar";
-            this.bCancelar.Size = new System.Drawing.Size(99, 23);
-            this.bCancelar.TabIndex = 1;
-            this.bCancelar.Text = "Cancelar";
-            this.bCancelar.UseVisualStyleBackColor = true;
-            this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
+            this.lbContrasena.AutoSize = true;
+            this.lbContrasena.Location = new System.Drawing.Point(34, 78);
+            this.lbContrasena.Name = "lbContrasena";
+            this.lbContrasena.Size = new System.Drawing.Size(61, 13);
+            this.lbContrasena.TabIndex = 1;
+            this.lbContrasena.Text = "Contraseña";
             // 
-            // labelLogin
+            // tbLogin
             // 
-            this.labelLogin.AutoSize = true;
-            this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogin.Location = new System.Drawing.Point(135, 121);
-            this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(57, 24);
-            this.labelLogin.TabIndex = 2;
-            this.labelLogin.Text = "Login";
+            this.tbLogin.Location = new System.Drawing.Point(136, 34);
+            this.tbLogin.Name = "tbLogin";
+            this.tbLogin.Size = new System.Drawing.Size(170, 20);
+            this.tbLogin.TabIndex = 2;
             // 
-            // labelPassword
+            // tbContrasena
             // 
-            this.labelPassword.AutoSize = true;
-            this.labelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.Location = new System.Drawing.Point(135, 170);
-            this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(92, 24);
-            this.labelPassword.TabIndex = 3;
-            this.labelPassword.Text = "Password";
+            this.tbContrasena.Location = new System.Drawing.Point(136, 70);
+            this.tbContrasena.Name = "tbContrasena";
+            this.tbContrasena.Size = new System.Drawing.Size(170, 20);
+            this.tbContrasena.TabIndex = 3;
+            this.tbContrasena.UseSystemPasswordChar = true;
             // 
-            // tBlogin
+            // btIngresar
             // 
-            this.tBlogin.Location = new System.Drawing.Point(247, 121);
-            this.tBlogin.Name = "tBlogin";
-            this.tBlogin.Size = new System.Drawing.Size(149, 20);
-            this.tBlogin.TabIndex = 4;
+            this.btIngresar.Location = new System.Drawing.Point(67, 132);
+            this.btIngresar.Name = "btIngresar";
+            this.btIngresar.Size = new System.Drawing.Size(75, 23);
+            this.btIngresar.TabIndex = 4;
+            this.btIngresar.Text = "Ingresar";
+            this.btIngresar.UseVisualStyleBackColor = true;
+            this.btIngresar.Click += new System.EventHandler(this.btIngresar_Click);
             // 
-            // textBox2
+            // btSalir
             // 
-            this.textBox2.Location = new System.Drawing.Point(247, 170);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 20);
-            this.textBox2.TabIndex = 5;
-            // 
-            // btAccesoPasajeros
-            // 
-            this.btAccesoPasajeros.Location = new System.Drawing.Point(190, 318);
-            this.btAccesoPasajeros.Name = "btAccesoPasajeros";
-            this.btAccesoPasajeros.Size = new System.Drawing.Size(138, 23);
-            this.btAccesoPasajeros.TabIndex = 6;
-            this.btAccesoPasajeros.Text = "Acceso a pasajeros";
-            this.btAccesoPasajeros.UseVisualStyleBackColor = true;
+            this.btSalir.Location = new System.Drawing.Point(177, 131);
+            this.btSalir.Name = "btSalir";
+            this.btSalir.Size = new System.Drawing.Size(75, 23);
+            this.btSalir.TabIndex = 5;
+            this.btSalir.Text = "Salir";
+            this.btSalir.UseVisualStyleBackColor = true;
+            this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 353);
-            this.Controls.Add(this.btAccesoPasajeros);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.tBlogin);
-            this.Controls.Add(this.labelPassword);
-            this.Controls.Add(this.labelLogin);
-            this.Controls.Add(this.bCancelar);
-            this.Controls.Add(this.bEntrar);
+            this.ClientSize = new System.Drawing.Size(335, 177);
+            this.Controls.Add(this.btSalir);
+            this.Controls.Add(this.btIngresar);
+            this.Controls.Add(this.tbContrasena);
+            this.Controls.Add(this.tbLogin);
+            this.Controls.Add(this.lbContrasena);
+            this.Controls.Add(this.lbLogin);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "STM";
-            this.Load += new System.EventHandler(this.Login_Load);
+            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,13 +111,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button bEntrar;
-        private System.Windows.Forms.Button bCancelar;
-        private System.Windows.Forms.Label labelLogin;
-        private System.Windows.Forms.Label labelPassword;
-        private System.Windows.Forms.TextBox tBlogin;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button btAccesoPasajeros;
+        private System.Windows.Forms.Label lbLogin;
+        private System.Windows.Forms.Label lbContrasena;
+        private System.Windows.Forms.TextBox tbLogin;
+        private System.Windows.Forms.TextBox tbContrasena;
+        private System.Windows.Forms.Button btIngresar;
+        private System.Windows.Forms.Button btSalir;
     }
 }
-

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuDEstacion));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuRegistro = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarAuxiliaresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -132,8 +133,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.Logo_copia;
             this.ClientSize = new System.Drawing.Size(528, 447);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuDEstacion";
             this.Text = "Director de Estacion";
             this.menuStrip1.ResumeLayout(false);

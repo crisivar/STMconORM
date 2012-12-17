@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using Interfaz_STM;
+//using Interfaz_STM;
 
 namespace WindowsFormsApplication1
 {
@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuDOperativo());
+            Application.Run(new Login());
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroTPersonalizada));
             this.btCancelar = new System.Windows.Forms.Button();
             this.btRegistrar = new System.Windows.Forms.Button();
             this.tBIDCliente = new System.Windows.Forms.TextBox();
@@ -159,9 +160,9 @@
             this.Controls.Add(this.tbCodigo);
             this.Controls.Add(this.lbSaldo);
             this.Controls.Add(this.lbCTarjeta);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistroTPersonalizada";
             this.Text = "Registro Tarjeta Personalizada";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.RegistroTPersonalizada_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

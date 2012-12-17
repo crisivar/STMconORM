@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentaSaldo));
             this.lbIDTarjeta = new System.Windows.Forms.Label();
             this.lbSaldo = new System.Windows.Forms.Label();
             this.tbIDTarjeta = new System.Windows.Forms.TextBox();
@@ -97,6 +98,7 @@
             this.Controls.Add(this.tbIDTarjeta);
             this.Controls.Add(this.lbSaldo);
             this.Controls.Add(this.lbIDTarjeta);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VentaSaldo";
             this.Text = "Venta Saldo";
             this.ResumeLayout(false);

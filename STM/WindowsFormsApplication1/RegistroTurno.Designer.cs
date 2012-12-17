@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroTurno));
             this.lbIDBus = new System.Windows.Forms.Label();
             this.lbRuta = new System.Windows.Forms.Label();
             this.lbEmpleado = new System.Windows.Forms.Label();
@@ -159,6 +160,7 @@
             this.Controls.Add(this.lbEmpleado);
             this.Controls.Add(this.lbRuta);
             this.Controls.Add(this.lbIDBus);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistroTurno";
             this.Text = "Registro Turno";
             this.ResumeLayout(false);

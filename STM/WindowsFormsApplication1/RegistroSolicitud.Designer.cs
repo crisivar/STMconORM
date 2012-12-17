@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroSolicitud));
             this.btCancelar = new System.Windows.Forms.Button();
             this.btRegistrar = new System.Windows.Forms.Button();
             this.tbDescripcion = new System.Windows.Forms.TextBox();
@@ -160,6 +161,7 @@
             this.Controls.Add(this.lbDescripcion);
             this.Controls.Add(this.lbTipo);
             this.Controls.Add(this.lbID);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistroSolicitud";
             this.Text = "Registro Solicitud";
             this.ResumeLayout(false);
