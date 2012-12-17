@@ -6,7 +6,7 @@ using Telerik.OpenAccess.Data.Common;
 
 namespace ORM_STM.Controladores
 {
-    class ControladorTarjetas
+    public class ControladorTarjetas
     {
 
         public void AñadirTarjeta(int id, int saldo , Boolean estado)

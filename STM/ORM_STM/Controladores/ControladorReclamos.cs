@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ORM_STM.Controladores
 {
-    class ControladorReclamos
+    public class ControladorReclamos
     {
 
         public void AñadirReclamo(int id,int tarjeta,int estacion, String tipo_sol, String descripcion)
