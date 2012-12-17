@@ -71,6 +71,7 @@
             this.btCancelar.TabIndex = 27;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // btRegistrar
             // 
@@ -80,6 +81,7 @@
             this.btRegistrar.TabIndex = 26;
             this.btRegistrar.Text = "Registrar";
             this.btRegistrar.UseVisualStyleBackColor = true;
+            this.btRegistrar.Click += new System.EventHandler(this.btRegistrar_Click);
             // 
             // lbDescripcion
             // 
@@ -103,9 +105,10 @@
             this.lbFechaC.AutoSize = true;
             this.lbFechaC.Location = new System.Drawing.Point(18, 81);
             this.lbFechaC.Name = "lbFechaC";
-            this.lbFechaC.Size = new System.Drawing.Size(159, 13);
+            this.lbFechaC.Size = new System.Drawing.Size(163, 13);
             this.lbFechaC.TabIndex = 22;
-            this.lbFechaC.Text = "Fecha Creacion (AAAA-MM-DD)\r\n";
+            this.lbFechaC.Text = "Fecha Creacion (DD/MM/AAAA)\r\n";
+            this.lbFechaC.Click += new System.EventHandler(this.lbFechaC_Click);
             // 
             // tbFechaC
             // 

@@ -5,10 +5,10 @@ using System.Text;
 
 namespace ORM_STM.Controladores
 {
-    class ControladorRuta
+    public class ControladorRuta
     {
 
-        public void AñadirRuta(int Id, DateTime Fecha_creacion, String descripcion)
+        public void AñadirRuta(int Id, DateTime Fecha_creacion, String descripcion, Boolean estado)
         {
 
             using (EntitiesModel dbContext = new EntitiesModel())
@@ -18,6 +18,7 @@ namespace ORM_STM.Controladores
                 ruta.Id = Id;
                 ruta.Fecha_creacion = Fecha_creacion;
                 ruta.Descripcion = descripcion;
+                ruta.Estado = estado;
 
                 dbContext.Add(ruta);
                 dbContext.SaveChanges();
