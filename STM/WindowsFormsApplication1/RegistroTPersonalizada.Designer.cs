@@ -30,70 +30,132 @@
         {
             this.btCancelar = new System.Windows.Forms.Button();
             this.btRegistrar = new System.Windows.Forms.Button();
-            this.tbSaldo = new System.Windows.Forms.TextBox();
+            this.tBIDCliente = new System.Windows.Forms.TextBox();
             this.tbCodigo = new System.Windows.Forms.TextBox();
             this.lbSaldo = new System.Windows.Forms.Label();
             this.lbCTarjeta = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tBTelefono = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tBEstacion = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btCancelar
             // 
-            this.btCancelar.Location = new System.Drawing.Point(218, 156);
+            this.btCancelar.Location = new System.Drawing.Point(190, 154);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
             this.btCancelar.TabIndex = 55;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // btRegistrar
             // 
-            this.btRegistrar.Location = new System.Drawing.Point(96, 156);
+            this.btRegistrar.Location = new System.Drawing.Point(65, 154);
             this.btRegistrar.Name = "btRegistrar";
             this.btRegistrar.Size = new System.Drawing.Size(75, 23);
             this.btRegistrar.TabIndex = 54;
             this.btRegistrar.Text = "Registrar";
             this.btRegistrar.UseVisualStyleBackColor = true;
+            this.btRegistrar.Click += new System.EventHandler(this.btRegistrar_Click);
             // 
-            // tbSaldo
+            // tBIDCliente
             // 
-            this.tbSaldo.Location = new System.Drawing.Point(150, 96);
-            this.tbSaldo.Name = "tbSaldo";
-            this.tbSaldo.Size = new System.Drawing.Size(195, 20);
-            this.tbSaldo.TabIndex = 48;
+            this.tBIDCliente.Location = new System.Drawing.Point(105, 35);
+            this.tBIDCliente.Name = "tBIDCliente";
+            this.tBIDCliente.Size = new System.Drawing.Size(223, 20);
+            this.tBIDCliente.TabIndex = 48;
             // 
             // tbCodigo
             // 
-            this.tbCodigo.Location = new System.Drawing.Point(150, 52);
+            this.tbCodigo.Location = new System.Drawing.Point(105, 9);
             this.tbCodigo.Name = "tbCodigo";
-            this.tbCodigo.Size = new System.Drawing.Size(195, 20);
+            this.tbCodigo.Size = new System.Drawing.Size(223, 20);
             this.tbCodigo.TabIndex = 47;
             // 
             // lbSaldo
             // 
             this.lbSaldo.AutoSize = true;
-            this.lbSaldo.Location = new System.Drawing.Point(43, 103);
+            this.lbSaldo.Location = new System.Drawing.Point(12, 38);
             this.lbSaldo.Name = "lbSaldo";
-            this.lbSaldo.Size = new System.Drawing.Size(34, 13);
+            this.lbSaldo.Size = new System.Drawing.Size(52, 13);
             this.lbSaldo.TabIndex = 42;
-            this.lbSaldo.Text = "Saldo";
+            this.lbSaldo.Text = "ID cliente";
             // 
             // lbCTarjeta
             // 
             this.lbCTarjeta.AutoSize = true;
-            this.lbCTarjeta.Location = new System.Drawing.Point(43, 59);
+            this.lbCTarjeta.Location = new System.Drawing.Point(12, 12);
             this.lbCTarjeta.Name = "lbCTarjeta";
             this.lbCTarjeta.Size = new System.Drawing.Size(76, 13);
             this.lbCTarjeta.TabIndex = 40;
             this.lbCTarjeta.Text = "Código Tarjeta";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 56;
+            this.label1.Text = "Telefono";
+            // 
+            // tBTelefono
+            // 
+            this.tBTelefono.Location = new System.Drawing.Point(105, 61);
+            this.tBTelefono.Name = "tBTelefono";
+            this.tBTelefono.Size = new System.Drawing.Size(223, 20);
+            this.tBTelefono.TabIndex = 57;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 90);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 58;
+            this.label2.Text = "Nombre";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(105, 87);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(223, 20);
+            this.textBox1.TabIndex = 59;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 116);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.TabIndex = 60;
+            this.label3.Text = "ID Estacion";
+            // 
+            // tBEstacion
+            // 
+            this.tBEstacion.Location = new System.Drawing.Point(105, 113);
+            this.tBEstacion.Name = "tBEstacion";
+            this.tBEstacion.Size = new System.Drawing.Size(223, 20);
+            this.tBEstacion.TabIndex = 61;
+            // 
             // RegistroTPersonalizada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(378, 212);
+            this.ClientSize = new System.Drawing.Size(336, 189);
+            this.Controls.Add(this.tBEstacion);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tBTelefono);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btRegistrar);
-            this.Controls.Add(this.tbSaldo);
+            this.Controls.Add(this.tBIDCliente);
             this.Controls.Add(this.tbCodigo);
             this.Controls.Add(this.lbSaldo);
             this.Controls.Add(this.lbCTarjeta);
@@ -110,9 +172,15 @@
 
         private System.Windows.Forms.Button btCancelar;
         private System.Windows.Forms.Button btRegistrar;
-        private System.Windows.Forms.TextBox tbSaldo;
+        private System.Windows.Forms.TextBox tBIDCliente;
         private System.Windows.Forms.TextBox tbCodigo;
         private System.Windows.Forms.Label lbSaldo;
         private System.Windows.Forms.Label lbCTarjeta;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tBTelefono;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tBEstacion;
     }
 }

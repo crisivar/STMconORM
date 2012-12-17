@@ -9,7 +9,7 @@ namespace ORM_STM.Controladores
     public class ControladorTarjetaPersonalizada
     {
 
-        public void AñadirTarjetaPersonalizada(int id, int saldo, Boolean estado, String id_cliente, String numeroTel, String nombreCliente)
+        public void AñadirTarjetaPersonalizada(int id, int id_cliente, String numeroTel, String nombreCliente, int estacion)
         {
 
             using (EntitiesModel dbContext = new EntitiesModel())
@@ -18,9 +18,12 @@ namespace ORM_STM.Controladores
                 Tarjeta_personalizada tarjetaP = new Tarjeta_personalizada();
 
                 tarjetaP.Id = id;
-                tarjetaP.Saldo = saldo;
-                tarjetaP.Estado = estado;
-
+                tarjetaP.Saldo = 0;
+                tarjetaP.Estado = true;
+                tarjetaP.Id_estacion = estacion;
+                tarjetaP.Id_cliente = id_cliente;
+                tarjetaP.Nombre = nombreCliente;
+                tarjetaP.Telefono = numeroTel;
 
                 dbContext.Add(tarjetaP);
                 dbContext.SaveChanges();
