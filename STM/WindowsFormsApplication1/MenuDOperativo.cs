@@ -18,6 +18,8 @@ namespace WindowsFormsApplication1
 
         private void registrarEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            RegistroEmpleado RegEmp = new RegistroEmpleado();
+            RegEmp.Show();
 
         }
 
