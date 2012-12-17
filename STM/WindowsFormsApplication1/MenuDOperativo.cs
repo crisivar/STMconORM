@@ -32,5 +32,30 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void menuRBus_Click(object sender, EventArgs e)
+        {
+            registrarBus RegBus = new registrarBus();
+            RegBus.Show();
+        }
+
+        private void menuRRuta_Click(object sender, EventArgs e)
+        {
+            RegistroRuta RegRut = new RegistroRuta();
+            RegRut.Show();
+
+        }
+
+        private void menuREstacion_Click(object sender, EventArgs e)
+        {
+            RegistroEstacion RegEst = new RegistroEstacion();
+            RegEst.Show();
+        }
+
+        private void registrarTurnoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroTurno RegTur = new RegistroTurno();
+            RegTur.Show();
+        }
     }
 }

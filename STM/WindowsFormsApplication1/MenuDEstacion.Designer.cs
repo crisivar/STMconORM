@@ -30,12 +30,12 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuRegistro = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarAuxiliaresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuConsulta = new System.Windows.Forms.ToolStripMenuItem();
+            this.auxiliaresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informacionCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarAuxiliaresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.auxiliaresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quejasYReclamosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.responderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,6 +63,13 @@
             this.menuRegistro.Size = new System.Drawing.Size(62, 20);
             this.menuRegistro.Text = "Registro";
             // 
+            // registrarAuxiliaresToolStripMenuItem
+            // 
+            this.registrarAuxiliaresToolStripMenuItem.Name = "registrarAuxiliaresToolStripMenuItem";
+            this.registrarAuxiliaresToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.registrarAuxiliaresToolStripMenuItem.Text = "Registrar Auxiliar";
+            this.registrarAuxiliaresToolStripMenuItem.Click += new System.EventHandler(this.registrarAuxiliaresToolStripMenuItem_Click);
+            // 
             // menuConsulta
             // 
             this.menuConsulta.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -72,6 +79,12 @@
             this.menuConsulta.Text = "Consulta";
             this.menuConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.menuConsulta.Click += new System.EventHandler(this.menuConsulta_Click);
+            // 
+            // auxiliaresToolStripMenuItem
+            // 
+            this.auxiliaresToolStripMenuItem.Name = "auxiliaresToolStripMenuItem";
+            this.auxiliaresToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.auxiliaresToolStripMenuItem.Text = "Auxiliares";
             // 
             // perfilToolStripMenuItem
             // 
@@ -94,18 +107,6 @@
             this.salirCuentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirCuentaToolStripMenuItem.Text = "Salir Cuenta";
             // 
-            // registrarAuxiliaresToolStripMenuItem
-            // 
-            this.registrarAuxiliaresToolStripMenuItem.Name = "registrarAuxiliaresToolStripMenuItem";
-            this.registrarAuxiliaresToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.registrarAuxiliaresToolStripMenuItem.Text = "Registrar Auxiliar";
-            // 
-            // auxiliaresToolStripMenuItem
-            // 
-            this.auxiliaresToolStripMenuItem.Name = "auxiliaresToolStripMenuItem";
-            this.auxiliaresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.auxiliaresToolStripMenuItem.Text = "Auxiliares";
-            // 
             // quejasYReclamosToolStripMenuItem
             // 
             this.quejasYReclamosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -118,13 +119,13 @@
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.consultarToolStripMenuItem.Text = "Consultar";
             // 
             // responderToolStripMenuItem
             // 
             this.responderToolStripMenuItem.Name = "responderToolStripMenuItem";
-            this.responderToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.responderToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.responderToolStripMenuItem.Text = "Responder";
             // 
             // MenuDEstacion

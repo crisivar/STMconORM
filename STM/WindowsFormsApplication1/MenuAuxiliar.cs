@@ -15,5 +15,25 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void registrarTarjetaPersonalizadaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroTPersonalizada RegTPer = new RegistroTPersonalizada();
+            RegTPer.Show();
+        }
+
+        private void recargaTarjetaGToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroTGenerica RegTGen = new RegistroTGenerica();
+            RegTGen.Show();
+        }
+
+        private void registrarQuejasYReclamosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroSolicitud RegSol = new RegistroSolicitud();
+            RegSol.Show();
+        }
+
+
     }
 }

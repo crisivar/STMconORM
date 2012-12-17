@@ -20,5 +20,11 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void registrarAuxiliaresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroEmpleado RegEmp = new RegistroEmpleado();
+            RegEmp.Show();
+        }
     }
 }

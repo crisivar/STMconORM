@@ -34,16 +34,16 @@
             this.menuRBus = new System.Windows.Forms.ToolStripMenuItem();
             this.menuRRuta = new System.Windows.Forms.ToolStripMenuItem();
             this.menuREstacion = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarTurnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuConsulta = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCEmpleados = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCBuses = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCRutas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCEstaciones = new System.Windows.Forms.ToolStripMenuItem();
+            this.turnosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informacionCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarTurnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.turnosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,18 +83,28 @@
             this.menuRBus.Name = "menuRBus";
             this.menuRBus.Size = new System.Drawing.Size(176, 22);
             this.menuRBus.Text = "Registrar Bus";
+            this.menuRBus.Click += new System.EventHandler(this.menuRBus_Click);
             // 
             // menuRRuta
             // 
             this.menuRRuta.Name = "menuRRuta";
             this.menuRRuta.Size = new System.Drawing.Size(176, 22);
             this.menuRRuta.Text = "Registrar Ruta";
+            this.menuRRuta.Click += new System.EventHandler(this.menuRRuta_Click);
             // 
             // menuREstacion
             // 
             this.menuREstacion.Name = "menuREstacion";
             this.menuREstacion.Size = new System.Drawing.Size(176, 22);
             this.menuREstacion.Text = "Registrar Estacion";
+            this.menuREstacion.Click += new System.EventHandler(this.menuREstacion_Click);
+            // 
+            // registrarTurnoToolStripMenuItem
+            // 
+            this.registrarTurnoToolStripMenuItem.Name = "registrarTurnoToolStripMenuItem";
+            this.registrarTurnoToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.registrarTurnoToolStripMenuItem.Text = "Registrar Turno";
+            this.registrarTurnoToolStripMenuItem.Click += new System.EventHandler(this.registrarTurnoToolStripMenuItem_Click);
             // 
             // menuConsulta
             // 
@@ -113,27 +123,33 @@
             // menuCEmpleados
             // 
             this.menuCEmpleados.Name = "menuCEmpleados";
-            this.menuCEmpleados.Size = new System.Drawing.Size(152, 22);
+            this.menuCEmpleados.Size = new System.Drawing.Size(132, 22);
             this.menuCEmpleados.Text = "Empleados";
             // 
             // menuCBuses
             // 
             this.menuCBuses.Name = "menuCBuses";
-            this.menuCBuses.Size = new System.Drawing.Size(152, 22);
+            this.menuCBuses.Size = new System.Drawing.Size(132, 22);
             this.menuCBuses.Text = "Buses";
             // 
             // menuCRutas
             // 
             this.menuCRutas.Name = "menuCRutas";
-            this.menuCRutas.Size = new System.Drawing.Size(152, 22);
+            this.menuCRutas.Size = new System.Drawing.Size(132, 22);
             this.menuCRutas.Text = "Rutas";
             this.menuCRutas.Click += new System.EventHandler(this.rutaToolStripMenuItem_Click);
             // 
             // menuCEstaciones
             // 
             this.menuCEstaciones.Name = "menuCEstaciones";
-            this.menuCEstaciones.Size = new System.Drawing.Size(152, 22);
+            this.menuCEstaciones.Size = new System.Drawing.Size(132, 22);
             this.menuCEstaciones.Text = "Estaciones";
+            // 
+            // turnosToolStripMenuItem
+            // 
+            this.turnosToolStripMenuItem.Name = "turnosToolStripMenuItem";
+            this.turnosToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.turnosToolStripMenuItem.Text = "Turnos";
             // 
             // perfilToolStripMenuItem
             // 
@@ -155,18 +171,6 @@
             this.salirCuentaToolStripMenuItem.Name = "salirCuentaToolStripMenuItem";
             this.salirCuentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirCuentaToolStripMenuItem.Text = "Salir Cuenta";
-            // 
-            // registrarTurnoToolStripMenuItem
-            // 
-            this.registrarTurnoToolStripMenuItem.Name = "registrarTurnoToolStripMenuItem";
-            this.registrarTurnoToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.registrarTurnoToolStripMenuItem.Text = "Registrar Turno";
-            // 
-            // turnosToolStripMenuItem
-            // 
-            this.turnosToolStripMenuItem.Name = "turnosToolStripMenuItem";
-            this.turnosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.turnosToolStripMenuItem.Text = "Turnos";
             // 
             // MenuDOperativo
             // 

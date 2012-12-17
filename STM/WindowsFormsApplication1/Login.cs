@@ -30,5 +30,10 @@ namespace Interfaz_STM
         {
 
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

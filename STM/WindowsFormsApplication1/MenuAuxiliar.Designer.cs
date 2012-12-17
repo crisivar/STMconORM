@@ -30,8 +30,8 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tarjetasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarTarjetaPersonalizadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.recargaTarjetaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarTarjetaPersonalizadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recargaTarjetaGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarQuejasYReclamosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consulltarTarjetaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,30 +57,33 @@
             // tarjetasToolStripMenuItem
             // 
             this.tarjetasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultarTarjetaPersonalizadaToolStripMenuItem,
-            this.recargaTarjetaToolStripMenuItem,
+            this.registrarTarjetaPersonalizadaToolStripMenuItem,
+            this.recargaTarjetaGToolStripMenuItem,
             this.registrarQuejasYReclamosToolStripMenuItem});
             this.tarjetasToolStripMenuItem.Name = "tarjetasToolStripMenuItem";
             this.tarjetasToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.tarjetasToolStripMenuItem.Text = "Registro";
             // 
-            // consultarTarjetaPersonalizadaToolStripMenuItem
+            // registrarTarjetaPersonalizadaToolStripMenuItem
             // 
-            this.consultarTarjetaPersonalizadaToolStripMenuItem.Name = "consultarTarjetaPersonalizadaToolStripMenuItem";
-            this.consultarTarjetaPersonalizadaToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
-            this.consultarTarjetaPersonalizadaToolStripMenuItem.Text = "Registrar Tarjeta Personalizada";
+            this.registrarTarjetaPersonalizadaToolStripMenuItem.Name = "registrarTarjetaPersonalizadaToolStripMenuItem";
+            this.registrarTarjetaPersonalizadaToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.registrarTarjetaPersonalizadaToolStripMenuItem.Text = "Registrar Tarjeta Personalizada";
+            this.registrarTarjetaPersonalizadaToolStripMenuItem.Click += new System.EventHandler(this.registrarTarjetaPersonalizadaToolStripMenuItem_Click);
             // 
-            // recargaTarjetaToolStripMenuItem
+            // recargaTarjetaGToolStripMenuItem
             // 
-            this.recargaTarjetaToolStripMenuItem.Name = "recargaTarjetaToolStripMenuItem";
-            this.recargaTarjetaToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
-            this.recargaTarjetaToolStripMenuItem.Text = "Registro Tarjeta Generica";
+            this.recargaTarjetaGToolStripMenuItem.Name = "recargaTarjetaGToolStripMenuItem";
+            this.recargaTarjetaGToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.recargaTarjetaGToolStripMenuItem.Text = "Registro Tarjeta Generica";
+            this.recargaTarjetaGToolStripMenuItem.Click += new System.EventHandler(this.recargaTarjetaGToolStripMenuItem_Click);
             // 
             // registrarQuejasYReclamosToolStripMenuItem
             // 
             this.registrarQuejasYReclamosToolStripMenuItem.Name = "registrarQuejasYReclamosToolStripMenuItem";
             this.registrarQuejasYReclamosToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
             this.registrarQuejasYReclamosToolStripMenuItem.Text = "Registrar Quejas y Reclamos";
+            this.registrarQuejasYReclamosToolStripMenuItem.Click += new System.EventHandler(this.registrarQuejasYReclamosToolStripMenuItem_Click);
             // 
             // consultaToolStripMenuItem
             // 
@@ -144,8 +147,8 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tarjetasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarTarjetaPersonalizadaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem recargaTarjetaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarTarjetaPersonalizadaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recargaTarjetaGToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarQuejasYReclamosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consulltarTarjetaToolStripMenuItem;
