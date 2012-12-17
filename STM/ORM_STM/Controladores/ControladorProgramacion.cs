@@ -8,16 +8,16 @@ namespace ORM_STM.Controladores
     public class ControladorProgramacion
     {
 
-        public void AñadirProgramacion(Bu bus, Ruta ruta, Empleado empleado, DateTime fecha, String horario)
+        public void AñadirProgramacion(int bus, int ruta, int empleado, DateTime fecha, String horario)
         {
 
             using (EntitiesModel dbContext = new EntitiesModel())
             {
 
                 Programacion programacion = new Programacion();
-                programacion.Bu = bus;
-                programacion.Rutum = ruta;
-                programacion.Empleado = empleado;
+                programacion.Id_bus = bus;
+                programacion.Id_ruta = ruta;
+                programacion.Id_empleado = empleado;
                 programacion.Fecha = fecha;
                 programacion.Horario = horario;   
                 

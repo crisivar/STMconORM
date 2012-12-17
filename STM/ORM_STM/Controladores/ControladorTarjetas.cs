@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Telerik.OpenAccess.Data.Common;
 
 namespace ORM_STM.Controladores
 {
@@ -82,6 +83,36 @@ namespace ORM_STM.Controladores
                     tar => tar.Id == id);
             }
 
+        }
+
+        public Boolean comprobarTarjeta(int id)
+        {
+            OACommand command;
+            Boolean exist = false;
+            // 1. Create a new instance of the OpenAccessContext.
+            using (EntitiesModel dbContext = new EntitiesModel())
+            {
+                // 2. Initialize the sql query.
+                string SqlQuery = "Select id from tarjeta where tarjeta.id=" + id;
+
+                using (OAConnection connection = dbContext.Connection)
+                {
+                    // 3. Create a new instance of the OACommand class.
+                    using (command = connection.CreateCommand())
+                    {
+                        command.CommandText = SqlQuery;
+
+                        // 4. Execute the command and retrieve the scalar values.
+                        using (System.Data.Common.DbDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read()) { exist = true; }
+
+                        }
+
+                    }
+                }
+            }
+            return exist;
         }
 
         public void ConsultaOrdenada() //es un ejemplo...podemos ponerle un parametro de entrada

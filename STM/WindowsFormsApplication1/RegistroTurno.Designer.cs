@@ -74,18 +74,18 @@
             this.lbHComienzo.AutoSize = true;
             this.lbHComienzo.Location = new System.Drawing.Point(13, 161);
             this.lbHComienzo.Name = "lbHComienzo";
-            this.lbHComienzo.Size = new System.Drawing.Size(79, 13);
+            this.lbHComienzo.Size = new System.Drawing.Size(37, 13);
             this.lbHComienzo.TabIndex = 3;
-            this.lbHComienzo.Text = "Hora Comienzo";
+            this.lbHComienzo.Text = "Fecha";
             // 
             // lbHFin
             // 
             this.lbHFin.AutoSize = true;
             this.lbHFin.Location = new System.Drawing.Point(16, 200);
             this.lbHFin.Name = "lbHFin";
-            this.lbHFin.Size = new System.Drawing.Size(47, 13);
+            this.lbHFin.Size = new System.Drawing.Size(41, 13);
             this.lbHFin.TabIndex = 4;
-            this.lbHFin.Text = "Hora Fin";
+            this.lbHFin.Text = "Horario";
             // 
             // tbIDBus
             // 
@@ -130,6 +130,7 @@
             this.btCancelar.TabIndex = 41;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // btRegistrar
             // 
@@ -139,6 +140,7 @@
             this.btRegistrar.TabIndex = 40;
             this.btRegistrar.Text = "Registrar";
             this.btRegistrar.UseVisualStyleBackColor = true;
+            this.btRegistrar.Click += new System.EventHandler(this.btRegistrar_Click);
             // 
             // RegistroTurno
             // 
