@@ -48,6 +48,42 @@
     <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2012.3.1209.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MenuAuxiliar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAuxiliar.Designer.cs">
+      <DependentUpon>MenuAuxiliar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroTurno.Designer.cs">
+      <DependentUpon>RegistroTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuConductor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuConductor.Designer.cs">
+      <DependentUpon>MenuConductor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuDEstacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuDEstacion.Designer.cs">
+      <DependentUpon>MenuDEstacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroTGenerica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroTGenerica.Designer.cs">
+      <DependentUpon>RegistroTGenerica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentaSaldo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentaSaldo.Designer.cs">
+      <DependentUpon>VentaSaldo.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuDOperativo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +140,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MenuAuxiliar.resx">
+      <DependentUpon>MenuAuxiliar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroTurno.resx">
+      <DependentUpon>RegistroTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuConductor.resx">
+      <DependentUpon>MenuConductor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuDEstacion.resx">
+      <DependentUpon>MenuDEstacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroTGenerica.resx">
+      <DependentUpon>RegistroTGenerica.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuDOperativo.resx">
       <DependentUpon>MenuDOperativo.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroTPersonalizada.resx">
       <DependentUpon>RegistroTPersonalizada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentaSaldo.resx">
+      <DependentUpon>VentaSaldo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.Config" />
     <None Include="Properties\Settings.settings">

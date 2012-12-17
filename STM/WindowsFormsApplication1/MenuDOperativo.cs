@@ -20,5 +20,15 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void rutaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void verToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
