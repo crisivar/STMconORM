@@ -13,6 +13,7 @@ namespace WindowsFormsApplication1
     public partial class RegistroEmpleado : Form
     {
         ControladorEmpleado cEmp = new ControladorEmpleado();
+        ControladorEstacion cEsta = new ControladorEstacion();
         public RegistroEmpleado()
         {
             InitializeComponent();
@@ -45,10 +46,18 @@ namespace WindowsFormsApplication1
             String car= cbCargo.Text;
             int sal = int.Parse(tbSalario.Text);
             int est = int.Parse(estacion.Text);
+            Boolean existe = cEsta.comprobarEstacion(est);
 
-            cEmp.AñadirEmpleado(id,tipId,nom,mail,dir,tel,car,civil,sal);
-            MessageBox.Show("el registro fue exitoso", null);
-            this.Close();
+            if (existe == false)
+            {
+                MessageBox.Show("la estacion qque esta usando no se encuentra registrada por favor prueve con otra", null);
+                estacion.Clear();
+            }
+            else {
+                cEmp.AñadirEmpleado(id, tipId, nom, mail, dir, tel, car, civil, sal, est);
+                MessageBox.Show("el registro fue exitoso", null);
+                this.Close();
+            }          
         }
     }
 }
