@@ -9,7 +9,7 @@ namespace ORM_STM.Controladores
     public class ControladorTarjetas
     {
 
-        public void AñadirTarjeta(int id, int saldo , Boolean estado)
+        public void AñadirTarjeta(int id, int estacion)
         {
 
             using (EntitiesModel dbContext = new EntitiesModel())
@@ -18,8 +18,9 @@ namespace ORM_STM.Controladores
                 Tarjetum tarjeta = new Tarjetum();
 
                 tarjeta.Id = id;
-                tarjeta.Saldo = saldo;
-                tarjeta.Estado = estado;
+                tarjeta.Saldo = 0;
+                tarjeta.Estado = true;
+                tarjeta.Id_estacion = estacion;
                 
 
                 dbContext.Add(tarjeta);
