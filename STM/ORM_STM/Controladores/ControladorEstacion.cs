@@ -85,31 +85,7 @@ namespace ORM_STM.Controladores
 
         }
 
-       /* public Boolean ComprobarEstacionPorId(int id)
-        {
-
-            Boolean existe = false;
-
-            
-            using (EntitiesModel dbContext = new EntitiesModel())
-            {
-                IEnumerable<Estacion> categories = dbContext.Estacions.Where(
-                    e => e.Id == id);
-
-                if (categories.Equals(null)){
-                
-                    existe = false;
-                }
-                else {
-                
-                    existe = true;
-                
-                }
-            }
-            return existe;
-        }
-        */
-
+       
         public Boolean comprobarEstacion(int id)
         {
             OACommand command;
