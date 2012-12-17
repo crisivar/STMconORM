@@ -25,8 +25,8 @@ namespace ORM_STM
 {
 	public partial class Solicitud_reclamo
 	{
-		private int _id_Tarjeta;
-		public virtual int Id_tarjeta 
+		private int? _id_Tarjeta;
+		public virtual int? Id_tarjeta 
 		{ 
 		    get
 		    {
@@ -38,8 +38,8 @@ namespace ORM_STM
 		    }
 		}
 		
-		private int _id_Estacion;
-		public virtual int Id_estacion 
+		private int? _id_Estacion;
+		public virtual int? Id_estacion 
 		{ 
 		    get
 		    {
@@ -100,6 +100,19 @@ namespace ORM_STM
 		    set
 		    {
 		        this._estado = value;
+		    }
+		}
+		
+		private int _id;
+		public virtual int Id 
+		{ 
+		    get
+		    {
+		        return this._id;
+		    }
+		    set
+		    {
+		        this._id = value;
 		    }
 		}
 		

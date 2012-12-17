@@ -8,19 +8,20 @@ namespace ORM_STM.Controladores
     class ControladorReclamos
     {
 
-        public void AñadirReclamo(Tarjetum tarjeta, Estacion estacion, String tipo_sol, String descripcion, String respuesta, Boolean estado)
+        public void AñadirReclamo(int id,int tarjeta,int estacion, String tipo_sol, String descripcion)
         {
 
             using (EntitiesModel dbContext = new EntitiesModel())
             {
 
                 Solicitud_reclamo reclamo = new Solicitud_reclamo();
-                reclamo.Tarjetum = tarjeta;
-                reclamo.Estacion = estacion;
+                reclamo.Id_tarjeta = tarjeta;
+                reclamo.Id_estacion = estacion;
                 reclamo.Tipo = tipo_sol;
                 reclamo.Descripcion = descripcion;
-                //reclamo.Respuesta = respuesta ...... falta este campo en la base de datos
-
+                //reclamo.Respuesta = respuesta;
+                reclamo.Estado = "Pendiente";
+                reclamo.Id = id;
                 dbContext.Add(reclamo);
                 dbContext.SaveChanges();
 

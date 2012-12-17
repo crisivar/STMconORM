@@ -66,18 +66,13 @@
       </orm:class>
       <orm:class name="Solicitud_reclamo" uniqueId="7a768134-3dc5-4b9f-9961-796b06638d33">
         <orm:table name="solicitud_reclamo" />
-        <orm:identity>
-          <orm:multiple-field>
-            <orm:single-field field-name="_id_Tarjeta" />
-            <orm:single-field field-name="_id_Estacion" />
-          </orm:multiple-field>
-        </orm:identity>
+        <orm:identity />
         <orm:concurrency strategy="changed" />
-        <orm:field name="_id_Tarjeta" property="Id_tarjeta" behavior="readwrite" uniqueId="8e4ca5e4-2e83-4824-aed2-cfb5c51d52b9" type="System.Int32">
-          <orm:column name="id_tarjeta" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:field name="_id_Tarjeta" property="Id_tarjeta" behavior="readwrite" uniqueId="8e4ca5e4-2e83-4824-aed2-cfb5c51d52b9" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="id_tarjeta" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
         </orm:field>
-        <orm:field name="_id_Estacion" property="Id_estacion" behavior="readwrite" uniqueId="2c6112ef-c41e-443c-bddf-252a7c47dffe" type="System.Int32">
-          <orm:column name="id_estacion" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:field name="_id_Estacion" property="Id_estacion" behavior="readwrite" uniqueId="2c6112ef-c41e-443c-bddf-252a7c47dffe" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="id_estacion" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
         </orm:field>
         <orm:field name="_tipo" property="Tipo" behavior="readwrite" uniqueId="ba4c95e0-241f-41fa-8a8b-4eabcadabf71" type="System.String">
           <orm:column name="tipo" sql-type="varchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
@@ -86,10 +81,13 @@
           <orm:column name="descripcion" sql-type="varchar" nullable="true" length="100" scale="0" ado-type="UnicodeStringVariableLength" />
         </orm:field>
         <orm:field name="_respuesta" property="Respuesta" behavior="readwrite" uniqueId="c116cae2-3dd7-4331-98ae-0a2e754d45a9" type="System.String">
-          <orm:column nullable="true" length="100" name="respuesta" scale="0" sql-type="varchar" ado-type="UnicodeStringVariableLength" />
+          <orm:column name="respuesta" sql-type="varchar" nullable="true" length="100" scale="0" ado-type="UnicodeStringVariableLength" />
         </orm:field>
         <orm:field name="_estado" property="Estado" behavior="readwrite" uniqueId="16be6642-ff82-4f69-8cf9-9328cf936ec1" type="System.String">
-          <orm:column nullable="true" length="100" name="estado" scale="0" sql-type="varchar" ado-type="UnicodeStringVariableLength" />
+          <orm:column name="estado" sql-type="varchar" nullable="true" length="100" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_id" property="Id" behavior="readwrite" uniqueId="83f03b37-1810-4311-bcc8-aa945a89d626" type="System.Int32">
+          <orm:column nullable="false" primary-key="true" length="0" name="id" scale="0" sql-type="int4" ado-type="Int32" />
         </orm:field>
         <orm:field name="_estacion" property="Estacion" behavior="readwrite" uniqueId="970d406f-8fe0-421f-95e2-8ce3894a983e" type="ORM_STM.Estacion">
           <orm:reference uniqueId="7dc66575-6f6c-4cb6-81c5-89a3ee7ecaf5">
@@ -379,17 +377,18 @@
         </orm:constraint>
       </orm:table>
       <orm:table name="solicitud_reclamo">
-        <orm:column name="id_tarjeta" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
-        <orm:column name="id_estacion" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="id_tarjeta" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="id_estacion" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
         <orm:column name="tipo" sql-type="varchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
         <orm:column name="descripcion" sql-type="varchar" nullable="true" length="100" scale="0" ado-type="UnicodeStringVariableLength" />
-        <orm:column nullable="true" length="100" name="respuesta" scale="0" sql-type="varchar" ado-type="UnicodeStringVariableLength" />
-        <orm:column nullable="true" length="100" name="estado" scale="0" sql-type="varchar" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="respuesta" sql-type="varchar" nullable="true" length="100" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="estado" sql-type="varchar" nullable="true" length="100" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column nullable="false" primary-key="true" length="0" name="id" scale="0" sql-type="int4" ado-type="Int32" />
         <orm:constraint name="solicitud_reclamo_id_estacion_fkey" destination-table="estacion">
-          <orm:column name="id_estacion" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+          <orm:column name="id_estacion" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
         </orm:constraint>
         <orm:constraint name="solicitud_reclamo_id_tarjeta_fkey" destination-table="tarjeta">
-          <orm:column name="id_tarjeta" sql-type="int4" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+          <orm:column name="id_tarjeta" sql-type="int4" nullable="true" length="0" scale="0" ado-type="Int32" />
         </orm:constraint>
       </orm:table>
       <orm:table name="ruta">
@@ -479,7 +478,7 @@
   </orm:orm>
   <ModelSettings xmlns="">
     <AppConfigConnectionPropertyName>Coneccion</AppConfigConnectionPropertyName>
-    <AppConfigConnectionString>server=localhost;port=5432;database=STM;userid=postgres;password=juandaosp</AppConfigConnectionString>
+    <AppConfigConnectionString>server=localhost;port=5432;database=STM;userid=postgres;password=12345</AppConfigConnectionString>
     <NamingSettings>
       <ClassRules>
         <CaseMode>PascalCase</CaseMode>
@@ -550,12 +549,13 @@
       </navigationalProperties>
     </DomainClass>
     <DomainClass Id="7a768134-3dc5-4b9f-9961-796b06638d33" name="Solicitud_reclamo" namespace="ORM_STM" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
-      <Property Id="2c6112ef-c41e-443c-bddf-252a7c47dffe" name="Id_estacion" type="Int32" label="Id_estacion : Int32" kind="Persistent" identity="true" fieldName="_id_Estacion" />
-      <Property Id="8e4ca5e4-2e83-4824-aed2-cfb5c51d52b9" name="Id_tarjeta" type="Int32" label="Id_tarjeta : Int32" kind="Persistent" identity="true" fieldName="_id_Tarjeta" />
+      <Property Id="2c6112ef-c41e-443c-bddf-252a7c47dffe" name="Id_estacion" type="Int32" label="Id_estacion : Int32" nullable="true" kind="Persistent" identity="true" fieldName="_id_Estacion" />
+      <Property Id="8e4ca5e4-2e83-4824-aed2-cfb5c51d52b9" name="Id_tarjeta" type="Int32" label="Id_tarjeta : Int32" nullable="true" kind="Persistent" identity="true" fieldName="_id_Tarjeta" />
       <Property Id="02e23287-e47d-4062-a3d4-13772235214a" name="Descripcion" label="Descripcion : String" kind="Persistent" fieldName="_descripcion" />
       <Property Id="ba4c95e0-241f-41fa-8a8b-4eabcadabf71" name="Tipo" label="Tipo : String" kind="Persistent" fieldName="_tipo" />
       <Property Id="c116cae2-3dd7-4331-98ae-0a2e754d45a9" name="Respuesta" label="Respuesta : String" kind="Persistent" fieldName="_respuesta" />
       <Property Id="16be6642-ff82-4f69-8cf9-9328cf936ec1" name="Estado" label="Estado : String" kind="Persistent" fieldName="_estado" />
+      <Property Id="83f03b37-1810-4311-bcc8-aa945a89d626" name="Id" type="Int32" label="Id : Int32" kind="Persistent" identity="true" fieldName="_id" />
       <AssociationTargets>
         <Association Id="7dc66575-6f6c-4cb6-81c5-89a3ee7ecaf5" SourceMultiplicity="One" name="Solicitud_reclamoHasEstacion">
           <DomainClassMoniker name="/EntitiesModel/Estacion" />
